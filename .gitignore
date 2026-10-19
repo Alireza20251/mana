@@ -1,0 +1,14 @@
+﻿.env
+/vendor/
+/storage/logs/*
+/storage/cache/*
+/storage/sessions/*
+/storage/tmp/*
+/storage/private/*
+!/storage/logs/.gitkeep
+!/storage/cache/.gitkeep
+!/storage/sessions/.gitkeep
+!/storage/tmp/.gitkeep
+!/storage/private/.gitkeep
+.DS_Store
+Thumbs.db

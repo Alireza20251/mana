@@ -1,0 +1,13 @@
+﻿{
+  "name": "mana/store",
+  "description": "Custom PHP e-commerce intermediary store",
+  "type": "project",
+  "require": {
+    "php": "^8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mana\\": "app/"
+    }
+  }
+}
