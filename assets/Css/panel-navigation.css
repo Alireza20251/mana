@@ -1,0 +1,266 @@
+/* =========================================
+   Roma - Admin Navigation
+========================================= */
+
+.navigation {
+    font-family: inherit;
+    color: #344853;
+}
+
+/* نوار کناری آیکون‌ها */
+
+.navigation .navigation-icon-menu {
+    background: linear-gradient(180deg, #17343d 0%, #112a33 100%);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navigation .navigation-icon-menu ul {
+    padding: 12px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navigation .navigation-icon-menu li {
+    position: relative;
+    margin: 5px 0;
+}
+
+.navigation .navigation-icon-menu li > a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: #b7c9ce;
+    background: transparent;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.navigation .navigation-icon-menu li > a:hover {
+    color: #fff;
+    border-color: rgba(75, 219, 215, 0.18);
+    background: rgba(34, 196, 193, 0.15);
+    transform: translateY(-1px);
+}
+
+.navigation .navigation-icon-menu li > a:focus-visible {
+    outline: 2px solid #36d3cf;
+    outline-offset: 2px;
+}
+
+.navigation .navigation-icon-menu li > a .icon {
+    margin: 0;
+    color: inherit;
+    font-size: 19px;
+    line-height: 1;
+}
+
+/* نشان کوچک پیام‌های جدید روی آیکون */
+
+.navigation .roma-nav-icon-badge {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    border: 2px solid #17343d;
+    border-radius: 20px;
+    color: #fff;
+    background: #e45c69;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 800;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+/* نوار فرعی منو */
+
+.navigation .navigation-menu-body {
+    color: #374a55;
+    background: #fff;
+    border-left: 1px solid #eaf0f2;
+    box-shadow: 5px 0 22px rgba(28, 54, 66, 0.035);
+}
+
+/* فهرست‌های اصلی */
+
+.navigation .navigation-menu-body > ul {
+    padding: 12px 12px 15px;
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid #edf1f3;
+}
+
+.navigation .navigation-menu-body > ul > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* عنوان بخش‌ها */
+
+.navigation .navigation-menu-body > ul > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 42px;
+    padding: 10px 13px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #344955;
+    background: #f7fafa;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.8;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.navigation .navigation-menu-body > ul > li > a:hover {
+    color: #159f9c;
+    border-color: #d6f3f1;
+    background: #effdfc;
+}
+
+/* زیرمنو */
+
+.navigation .navigation-menu-body ul ul {
+    padding: 8px 11px 2px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navigation .navigation-menu-body ul ul li {
+    position: relative;
+    margin: 3px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation .navigation-menu-body ul ul li::before {
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #cad9dd;
+    content: "";
+    transform: translateY(-50%);
+    transition: background 0.2s ease;
+}
+
+.navigation .navigation-menu-body ul ul li a {
+    display: block;
+    min-height: 36px;
+    padding: 8px 17px 8px 8px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #73828c;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.9;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.navigation .navigation-menu-body ul ul li:hover::before {
+    background: #22c4c1;
+}
+
+.navigation .navigation-menu-body ul ul li a:hover {
+    color: #159f9c;
+    border-color: #e0f6f5;
+    background: #f1fdfc;
+}
+
+/* نشان تعداد پیام‌های خوانده‌نشده */
+
+.navigation .roma-nav-unread-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 23px;
+    height: 23px;
+    padding: 0 6px;
+    margin-right: 7px;
+    border-radius: 8px;
+    color: #fff;
+    background: #df5967;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.navigation .roma-nav-unread-text {
+    display: inline-block;
+    margin-right: 4px;
+    color: #d95160;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* لینک خروج */
+
+.navigation .navigation-icon-menu li > a[aria-label="خروج از پنل"] {
+    color: #f0b8bd;
+}
+
+.navigation .navigation-icon-menu li > a[aria-label="خروج از پنل"]:hover {
+    color: #fff;
+    border-color: rgba(239, 105, 119, 0.2);
+    background: rgba(224, 76, 93, 0.17);
+}
+
+/* جلوگیری از تغییرات ناخواسته قالب اصلی */
+
+.navigation .navigation-menu-body a {
+    font-family: inherit;
+}
+
+.navigation .navigation-menu-body a:focus-visible {
+    outline: 2px solid rgba(34, 196, 193, 0.6);
+    outline-offset: 2px;
+}
+
+/* نمایشگرهای باریک */
+
+@media (max-width: 768px) {
+    .navigation .navigation-menu-body > ul {
+        padding-right: 9px;
+        padding-left: 9px;
+    }
+
+    .navigation .navigation-menu-body > ul > li > a {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .navigation .navigation-menu-body ul ul {
+        padding-right: 7px;
+    }
+}

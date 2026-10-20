@@ -1,0 +1,302 @@
+
+.roma-category-edit-page {
+    direction: rtl;
+    color: #2d3c42;
+    padding-bottom: 35px;
+}
+
+.roma-category-edit-page * {
+    box-sizing: border-box;
+}
+
+/* سربرگ */
+
+.roma-category-edit-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 30px;
+    margin-bottom: 25px;
+    background: linear-gradient(115deg, #e8f9f8, #ffffff);
+    border: 1px solid #d9efed;
+    border-radius: 18px;
+}
+
+.roma-category-edit-hero-content {
+    min-width: 0;
+}
+
+.roma-category-edit-badge {
+    display: inline-block;
+    padding: 6px 13px;
+    margin-bottom: 10px;
+    color: #148f8c;
+    background: #d9f4f2;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.roma-category-edit-hero h1 {
+    margin: 0 0 9px;
+    color: #26383e;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.roma-category-edit-hero p {
+    margin: 0;
+    color: #78878c;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.roma-category-edit-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 68px;
+    height: 68px;
+    color: #159d99;
+    background: #dff6f4;
+    border: 1px solid #ccefeb;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+/* کارت فرم */
+
+.roma-category-edit-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e8edef;
+    border-radius: 17px;
+    box-shadow: 0 6px 24px rgba(35, 54, 62, 0.045);
+}
+
+.roma-category-edit-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 28px;
+    border-bottom: 1px solid #edf1f2;
+}
+
+.roma-category-edit-card-header h2 {
+    margin: 0 0 7px;
+    color: #30434a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.roma-category-edit-card-header p {
+    margin: 0;
+    color: #849196;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.roma-category-edit-required {
+    color: #d66b6b;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* پیام خطا */
+
+.roma-category-edit-error {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 22px 28px 0;
+    padding: 14px 16px;
+    color: #a83f46;
+    background: #fff2f2;
+    border: 1px solid #f6dada;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.roma-category-edit-error > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    color: #ffffff;
+    background: #d95761;
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+/* فرم */
+
+.roma-category-edit-form {
+    padding: 28px;
+}
+
+.roma-category-edit-field {
+    max-width: 850px;
+    margin-bottom: 28px;
+}
+
+.roma-category-edit-field label {
+    display: block;
+    margin-bottom: 10px;
+    color: #3c5056;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.roma-category-edit-field label span {
+    color: #df7272;
+}
+
+.roma-category-edit-field input[type="text"] {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 15px;
+    color: #34464c;
+    background: #fbfcfc;
+    border: 1px solid #dfe7e9;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.9;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.roma-category-edit-field input[type="text"]:focus {
+    background: #ffffff;
+    border-color: #22c4c1;
+    box-shadow: 0 0 0 3px rgba(34, 196, 193, 0.10);
+}
+
+.roma-category-edit-field small {
+    display: block;
+    margin-top: 9px;
+    color: #89969b;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* دکمه‌ها */
+
+.roma-category-edit-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #edf1f2;
+}
+
+.roma-category-edit-submit,
+.roma-category-edit-cancel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 45px;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.roma-category-edit-submit {
+    color: #ffffff;
+    background: linear-gradient(135deg, #26c5c0, #159d99);
+    border: 1px solid #22b8b3;
+    cursor: pointer;
+    box-shadow: 0 5px 13px rgba(34, 196, 193, 0.14);
+}
+
+.roma-category-edit-submit:hover {
+    color: #ffffff;
+    background: #159d99;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(34, 196, 193, 0.2);
+}
+
+.roma-category-edit-submit span {
+    font-size: 17px;
+}
+
+.roma-category-edit-cancel {
+    color: #607178 !important;
+    background: #f4f7f7;
+    border: 1px solid #e3eaea;
+}
+
+.roma-category-edit-cancel:hover {
+    color: #34464c !important;
+    background: #eaf0f0;
+}
+
+/* صفحه‌های کوچک‌تر */
+
+@media (max-width: 760px) {
+    .roma-category-edit-hero {
+        padding: 23px;
+    }
+
+    .roma-category-edit-hero h1 {
+        font-size: 22px;
+    }
+
+    .roma-category-edit-form {
+        padding: 22px;
+    }
+
+    .roma-category-edit-card-header {
+        padding: 22px;
+    }
+
+    .roma-category-edit-error {
+        margin-right: 22px;
+        margin-left: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .roma-category-edit-hero-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+
+    .roma-category-edit-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .roma-category-edit-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .roma-category-edit-submit,
+    .roma-category-edit-cancel {
+        width: 100%;
+    }
+}

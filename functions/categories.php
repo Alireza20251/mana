@@ -5,45 +5,52 @@ require_once "helpers.php";
 
 function createCategory($title)
 {
-    $sql = "INSERT INTO categories SET title=?, created_at=now()";
-     global $conn;
+    global $conn;
+
+    $sql = "INSERT INTO categories SET title = ?, created_at = NOW()";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$title]);
+
+    return $stmt->execute([$title]);
 }
 
-function getCategoryById($id){
-    $sql = "SELECT * FROM categories WHERE id=?";
+function getCategoryById($id)
+{
     global $conn;
+
+    $sql = "SELECT * FROM categories WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$id]);
-    return  $stmt->fetch();
+
+    return $stmt->fetch();
 }
 
-function getAllCategories(){
-    $sql = "SELECT * FROM categories";
+function getAllCategories()
+{
     global $conn;
+
+    $sql = "SELECT * FROM categories";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
-    return  $stmt->fetchAll();
+
+    return $stmt->fetchAll();
 }
 
-function updateCategory($id,$title){
-
-    $sql = "UPDATE categories SET title=?, updated_at=now() WHERE id=?";
+function updateCategory($id, $title)
+{
     global $conn;
+
+    $sql = "UPDATE categories SET title = ?, updated_at = NOW() WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$title,$id]);
+
+    return $stmt->execute([$title, $id]);
 }
 
-
-function deleteCategoryById($id){
-    $sql = "DELETE FROM  categories WHERE id=?";
+function deleteCategoryById($id)
+{
     global $conn;
+
+    $sql = "DELETE FROM categories WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$id]);
+
+    return $stmt->execute([$id]);
 }
-
-
-
-
-

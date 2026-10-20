@@ -1,0 +1,255 @@
+/* ================================
+   ROMA - Articles Page
+================================ */
+
+.articles-page {
+    padding: 50px 0 80px;
+    background: #f8f9fa;
+}
+
+/* Page Heading */
+
+.articles-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.articles-heading h1 {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 15px;
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.articles-heading h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: #22c4c1;
+    border-radius: 10px;
+}
+
+.articles-heading p {
+    margin: 0;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   Article Card
+================================ */
+
+.article-card {
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Article Image */
+
+.article-image {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.article-card:hover .article-image img {
+    transform: scale(1.06);
+}
+
+
+/* Article Content */
+
+.article-content {
+    padding: 22px;
+}
+
+
+/* Category */
+
+.article-category {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #22c4c1;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Title */
+
+.article-title {
+    margin: 0 0 12px;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.article-title a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.article-title a:hover {
+    color: #22c4c1;
+}
+
+
+/* Summary */
+
+.article-summary {
+    min-height: 58px;
+    margin: 0 0 20px;
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* Read More */
+
+.read-more {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #22c4c1;
+    border-radius: 7px;
+    color: #fff !important;
+    font-size: 13px;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+.read-more:hover {
+    background: #159e9b;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   Empty Articles
+================================ */
+
+.no-articles {
+    padding: 60px 25px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.no-articles h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 22px;
+}
+
+.no-articles p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================================
+   Desktop Spacing
+================================ */
+
+.articles-page .row {
+    align-items: stretch;
+}
+
+.articles-page .col-xl-4 {
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   Tablet
+================================ */
+
+@media (max-width: 991px) {
+
+    .articles-page {
+        padding: 40px 0 60px;
+    }
+
+    .articles-heading {
+        margin-bottom: 35px;
+    }
+
+    .articles-heading h1 {
+        font-size: 28px;
+    }
+
+    .article-image {
+        height: 210px;
+    }
+
+}
+
+
+/* ================================
+   Small Screens
+================================ */
+
+@media (max-width: 575px) {
+
+    .articles-page {
+        padding: 30px 0 50px;
+    }
+
+    .articles-heading {
+        margin-bottom: 30px;
+    }
+
+    .articles-heading h1 {
+        font-size: 25px;
+    }
+
+    .articles-heading p {
+        font-size: 13px;
+    }
+
+    .article-image {
+        height: 200px;
+    }
+
+    .article-content {
+        padding: 18px;
+    }
+
+    .article-title {
+        font-size: 17px;
+    }
+
+}

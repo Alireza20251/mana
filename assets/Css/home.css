@@ -1,0 +1,629 @@
+
+.roma-home {
+    background: #f7f9fa;
+    color: #222;
+}
+
+
+.roma-hero {
+    position: relative;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #eefafa 100%);
+    overflow: hidden;
+}
+
+.roma-hero::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: rgba(34, 196, 193, 0.08);
+    top: -180px;
+    left: -100px;
+}
+
+.roma-hero-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.roma-hero-content {
+    flex: 1;
+}
+
+.roma-hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    background: rgba(34, 196, 193, 0.1);
+    color: #159b99;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.roma-hero h1 {
+    margin: 0 0 20px;
+    font-size: 46px;
+    line-height: 1.5;
+    font-weight: 800;
+    color: #17252b;
+}
+
+.roma-hero h1 span {
+    color: #22c4c1;
+}
+
+.roma-hero-text {
+    max-width: 620px;
+    margin: 0 0 30px;
+    color: #66757d;
+    font-size: 17px;
+    line-height: 2.1;
+}
+
+.roma-hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.roma-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    padding: 13px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.roma-btn-primary {
+    background: #22c4c1;
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(34, 196, 193, 0.2);
+}
+
+.roma-btn-primary:hover {
+    transform: translateY(-2px);
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(34, 196, 193, 0.3);
+}
+
+.roma-btn-secondary {
+    background: #fff;
+    color: #263238;
+    border: 1px solid #e3e9eb;
+}
+
+.roma-btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: #22c4c1;
+    color: #159b99;
+}
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.roma-hero-visual {
+    flex: 0 0 420px;
+    position: relative;
+}
+
+.roma-hero-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 20px 60px rgba(25, 45, 55, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.roma-hero-card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.roma-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #22c4c1;
+}
+
+.roma-hero-card-title {
+    color: #263238;
+    font-weight: 700;
+}
+
+.roma-hero-card-line {
+    height: 10px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    background: #edf2f3;
+}
+
+.roma-hero-card-line.short {
+    width: 65%;
+}
+
+.roma-hero-card-line.medium {
+    width: 82%;
+}
+
+.roma-hero-card-highlight {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f1fbfb;
+    color: #168f8d;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   GENERAL SECTION
+========================================= */
+
+.roma-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.roma-section-heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.roma-section-heading span {
+    display: block;
+    margin-bottom: 8px;
+    color: #22c4c1;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.roma-section-heading h2 {
+    margin: 0 0 12px;
+    color: #17252b;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.roma-section-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #718087;
+    line-height: 2;
+}
+
+
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.roma-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.roma-feature-card {
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #edf1f2;
+    border-radius: 18px;
+    text-align: center;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.roma-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(25, 45, 55, 0.08);
+    border-color: rgba(34, 196, 193, 0.25);
+}
+
+.roma-feature-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #eefafa;
+    color: #22c4c1;
+}
+
+.roma-feature-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.roma-feature-card h3 {
+    margin: 0 0 12px;
+    color: #263238;
+    font-size: 18px;
+}
+
+.roma-feature-card p {
+    margin: 0;
+    color: #77858b;
+    line-height: 2;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LATEST ARTICLES SECTION
+========================================= */
+
+.roma-latest {
+    max-width: none;
+    padding-left: max(20px, calc((100% - 1180px) / 2));
+    padding-right: max(20px, calc((100% - 1180px) / 2));
+    background: #fff;
+}
+
+
+/* ---------- Heading + Link ---------- */
+
+.roma-section-heading-with-link {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: right;
+}
+
+.roma-section-heading-with-link > div {
+    flex: 1;
+}
+
+.roma-section-heading-with-link p {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.roma-section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 11px 17px;
+    border: 1px solid #e4ebed;
+    border-radius: 10px;
+    background: #fff;
+    color: #263238;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.roma-section-link span {
+    display: inline;
+    margin: 0;
+    color: inherit;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.roma-section-link:hover {
+    border-color: #22c4c1;
+    background: #f1fbfb;
+    color: #159b99;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Article Grid ---------- */
+
+.roma-latest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* ---------- Article Card ---------- */
+
+.roma-latest-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #edf1f2;
+    border-radius: 18px;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.roma-latest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(25, 45, 55, 0.08);
+    border-color: rgba(34, 196, 193, 0.25);
+}
+
+
+/* ---------- Article Image ---------- */
+
+.roma-latest-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.roma-latest-card:hover .roma-latest-image {
+    transform: scale(1.03);
+}
+
+
+/* ---------- Article Content ---------- */
+
+.roma-latest-content {
+    padding: 22px;
+}
+
+.roma-article-category {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #eefafa;
+    color: #159b99;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.roma-latest-content h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.roma-latest-content h3 a {
+    color: #263238;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.roma-latest-content h3 a:hover {
+    color: #22c4c1;
+}
+
+.roma-latest-content p {
+    min-height: 56px;
+    margin: 0 0 18px;
+    color: #77858b;
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* ---------- Read More ---------- */
+
+.roma-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #159b99;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.roma-read-more span {
+    transition: transform 0.2s ease;
+}
+
+.roma-read-more:hover {
+    color: #22c4c1;
+}
+
+.roma-read-more:hover span {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   EMPTY ARTICLES
+========================================= */
+
+.roma-empty-articles {
+    padding: 65px 30px;
+    border: 1px dashed #dce7e9;
+    border-radius: 20px;
+    background: #f9fbfb;
+    text-align: center;
+}
+
+.roma-empty-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: #eefafa;
+    color: #22c4c1;
+}
+
+.roma-empty-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.roma-empty-articles h3 {
+    margin: 0 0 10px;
+    color: #263238;
+    font-size: 20px;
+}
+
+.roma-empty-articles p {
+    margin: 0 auto 25px;
+    color: #77858b;
+    line-height: 2;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.roma-cta {
+    max-width: 1180px;
+    margin: 0 auto 80px;
+    padding: 55px 30px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #17252b, #263f46);
+    text-align: center;
+    color: #fff;
+}
+
+.roma-cta h2 {
+    margin: 0 0 15px;
+    font-size: 30px;
+}
+
+.roma-cta p {
+    max-width: 620px;
+    margin: 0 auto 25px;
+    color: #cbd8db;
+    line-height: 2;
+}
+
+.roma-cta .roma-btn-primary {
+    box-shadow: none;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .roma-hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .roma-hero-content {
+        width: 100%;
+    }
+
+    .roma-hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .roma-hero-buttons {
+        justify-content: center;
+    }
+
+    .roma-hero-visual {
+        width: 100%;
+        max-width: 420px;
+        flex-basis: auto;
+    }
+
+    .roma-features,
+    .roma-latest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roma-section-heading-with-link {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .roma-section-heading-with-link p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .roma-hero {
+        padding: 60px 15px;
+    }
+
+    .roma-hero h1 {
+        font-size: 32px;
+    }
+
+    .roma-section {
+        padding: 60px 15px;
+    }
+
+    .roma-latest {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .roma-cta {
+        margin: 0 15px 60px;
+    }
+
+}
+.roma-hero-card-highlight {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.roma-hero-card-highlight strong {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.roma-hero-card-highlight span {
+    font-size: 13px;
+    line-height: 2;
+    opacity: 0.9;
+}
+
+.roma-hero-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 11px;
+    opacity: 0.65;
+}

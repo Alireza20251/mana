@@ -1,0 +1,667 @@
+
+.roma-messages-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+    background: #f5f7f8;
+}
+
+.roma-chat-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 20px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.roma-chat-back {
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto 14px !important;
+    padding: 0 !important;
+}
+
+.roma-chat-back a {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 7px;
+
+    margin: 0 !important;
+    padding: 9px 14px !important;
+
+    background: #ffffff;
+    border: 1px solid #e6ebeb !important;
+    border-radius: 9px;
+
+    color: #777777;
+    font-size: 12px;
+    line-height: 1 !important;
+    text-decoration: none;
+}
+
+.roma-chat-back span {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+
+/* =========================================
+   MAIN CHAT BOX
+========================================= */
+
+.roma-chat-box {
+    width: 900px;
+    max-width: 100%;
+    height: 700px;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e6ebeb !important;
+    border-radius: 20px;
+
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.roma-chat-header {
+    height: 78px;
+    min-height: 78px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 !important;
+    padding: 0 28px !important;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 0 !important;
+    border-bottom: 1px solid #eeeeee !important;
+}
+
+.roma-chat-header h1 {
+    margin: 0 0 5px 0 !important;
+    padding: 0 !important;
+
+    color: #222222;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.3 !important;
+}
+
+.roma-chat-online {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #999999;
+
+    font-size: 11px;
+    line-height: 1 !important;
+}
+
+.roma-chat-online span {
+    width: 7px;
+    height: 7px;
+
+    display: block;
+    flex-shrink: 0;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 50%;
+
+    background: #22c4c1;
+}
+
+.roma-chat-total {
+    margin: 0 !important;
+    padding: 7px 12px !important;
+
+    background: #f5f7f7;
+
+    border-radius: 20px;
+
+    color: #888888;
+
+    font-size: 11px;
+    line-height: 1 !important;
+}
+
+
+/* =========================================
+   CHAT BODY
+========================================= */
+
+.roma-chat-body {
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+
+    margin: 0 !important;
+    padding: 28px 35px !important;
+
+    box-sizing: border-box;
+
+    background: #f8fafa;
+}
+
+
+/* =========================================
+   MESSAGES CONTAINER
+========================================= */
+
+.roma-chat-messages {
+    width: 100%;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    /* فاصله بین پیام‌ها */
+    gap: 3px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MESSAGE ROW
+========================================= */
+
+.roma-message-row {
+    width: 100% !important;
+
+    display: flex !important;
+
+    align-items: flex-start !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box;
+
+    line-height: 1 !important;
+}
+
+.roma-message-row.visitor {
+    justify-content: flex-start !important;
+}
+
+.roma-message-row.admin {
+    justify-content: flex-end !important;
+}
+
+
+/* =========================================
+   MESSAGE BOX
+========================================= */
+
+.roma-chat-messages .roma-message {
+    display: block !important;
+
+    width: max-content !important;
+    max-width: 60% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+
+    margin: 0 !important;
+
+    padding: 7px 13px 5px !important;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+
+/* =========================================
+   VISITOR MESSAGE
+========================================= */
+
+.roma-message-row.visitor .roma-message {
+    background: #ffffff;
+
+    border: 1px solid #e5eaea !important;
+    border-bottom-right-radius: 4px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.025);
+}
+
+
+/* =========================================
+   ADMIN MESSAGE
+========================================= */
+
+.roma-message-row.admin .roma-message {
+    background: #22c4c1;
+
+    border: 0 !important;
+    border-bottom-left-radius: 4px;
+
+    box-shadow: 0 5px 14px rgba(34, 196, 193, 0.15);
+}
+
+
+/* =========================================
+   SENDER
+========================================= */
+
+.roma-chat-messages .roma-message-sender {
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 0 2px 0 !important;
+    padding: 0 !important;
+
+    color: #22aaa7;
+
+    font-size: 10px !important;
+    font-weight: 700;
+
+    line-height: 12px !important;
+}
+
+.roma-message-row.admin .roma-message-sender {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================
+   MESSAGE TEXT
+========================================= */
+
+.roma-chat-messages .roma-message-text {
+    display: block !important;
+
+    width: auto !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #444444;
+
+    font-size: 13px !important;
+    font-weight: 400;
+
+    line-height: 19px !important;
+
+    word-break: break-word;
+}
+
+.roma-message-row.admin .roma-message-text {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.roma-chat-messages .roma-message-date {
+    display: block !important;
+
+    width: auto !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 2px 0 0 0 !important;
+    padding: 0 !important;
+
+    color: #aaaaaa;
+
+    font-size: 8px !important;
+    font-weight: 400;
+
+    line-height: 9px !important;
+}
+
+.roma-message-row.admin .roma-message-date {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================
+   RESET ELEMENTS INSIDE MESSAGE
+========================================= */
+
+.roma-chat-messages .roma-message *,
+.roma-chat-messages .roma-message *::before,
+.roma-chat-messages .roma-message *::after {
+    box-sizing: border-box;
+}
+
+.roma-chat-messages .roma-message p,
+.roma-chat-messages .roma-message div,
+.roma-chat-messages .roma-message span,
+.roma-chat-messages .roma-message strong,
+.roma-chat-messages .roma-message small {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.roma-chat-empty {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: center;
+}
+
+.roma-empty-symbol {
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+
+    font-size: 40px;
+    line-height: 1 !important;
+}
+
+.roma-chat-empty h2 {
+    margin: 0 0 7px 0 !important;
+    padding: 0 !important;
+
+    color: #444444;
+
+    font-size: 16px;
+    line-height: 1.4 !important;
+}
+
+.roma-chat-empty p {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #999999;
+
+    font-size: 12px;
+    line-height: 1.5 !important;
+}
+
+
+/* =========================================
+   COMPOSE AREA
+========================================= */
+
+.roma-chat-compose {
+    flex-shrink: 0;
+
+    margin: 0 !important;
+    padding: 15px 22px 12px !important;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.roma-chat-error {
+    margin: 0 0 9px 0 !important;
+    padding: 8px 12px !important;
+
+    background: #fff3f3;
+
+    border: 1px solid #ffd7d7 !important;
+    border-radius: 8px;
+
+    color: #d9534f;
+
+    font-size: 11px;
+    line-height: 1.5 !important;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.roma-chat-form {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 9px;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.roma-chat-form textarea {
+    flex: 1;
+
+    width: auto;
+
+    height: 46px;
+    min-height: 46px;
+    max-height: 120px;
+
+    margin: 0 !important;
+    padding: 12px 15px !important;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e2e7e7 !important;
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #f8fafa;
+
+    color: #333333;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.7 !important;
+
+    resize: vertical;
+}
+
+.roma-chat-form textarea:focus {
+    background: #ffffff;
+
+    border-color: #22c4c1 !important;
+
+    box-shadow: 0 0 0 3px rgba(34, 196, 193, 0.08) !important;
+}
+
+.roma-chat-form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.roma-chat-form button {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 11px;
+
+    background: #22c4c1;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(34, 196, 193, 0.18);
+}
+
+.roma-chat-form button:hover {
+    background: #159f9c;
+}
+
+.roma-chat-form button span {
+    display: block;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 19px;
+    line-height: 1 !important;
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   HINT
+========================================= */
+
+.roma-chat-hint {
+    margin: 5px 0 0 0 !important;
+    padding: 0 !important;
+
+    color: #b0b5b5;
+
+    font-size: 9px;
+    line-height: 1.2 !important;
+
+    text-align: center;
+
+    border: 0 !important;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.roma-chat-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.roma-chat-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.roma-chat-body::-webkit-scrollbar-thumb {
+    background: #d9e2e2;
+    border-radius: 10px;
+}
+
+.roma-chat-body::-webkit-scrollbar-thumb:hover {
+    background: #22c4c1;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .roma-chat-page {
+        padding: 15px;
+    }
+
+    .roma-chat-box {
+        height: calc(100vh - 80px);
+        border-radius: 16px;
+    }
+
+    .roma-chat-header {
+        padding: 0 17px !important;
+    }
+
+    .roma-chat-body {
+        padding: 20px 15px !important;
+    }
+
+    .roma-chat-messages {
+        gap: 3px !important;
+    }
+
+    .roma-chat-messages .roma-message {
+        max-width: 80% !important;
+    }
+
+    .roma-chat-compose {
+        padding: 12px !important;
+    }
+}

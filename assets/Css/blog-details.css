@@ -1,0 +1,331 @@
+
+.roma-article-page {
+    padding: 35px 0 65px;
+}
+
+.roma-article-wrapper {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+.roma-article-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+}
+
+
+.roma-article-header {
+    padding: 45px 55px 30px;
+    text-align: center;
+}
+
+.roma-article-category {
+    display: inline-block;
+    padding: 7px 17px;
+    margin-bottom: 18px;
+
+    background: rgba(34, 196, 193, 0.10);
+    color: #22c4c1;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.roma-article-title {
+    margin: 0;
+
+    color: #222222;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    line-height: 1.8;
+}
+
+.roma-article-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+    color: #999999;
+
+    font-size: 13px;
+}
+
+.roma-article-meta-dot {
+    color: #22c4c1;
+    font-weight: bold;
+}
+
+
+.roma-article-image-wrapper {
+    padding: 0 40px;
+}
+
+.roma-article-image {
+    display: block;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+}
+
+.roma-article-no-image {
+    height: 260px;
+
+    margin: 0 40px;
+
+    border-radius: 16px;
+
+    background: #eeeeee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999999;
+
+    font-size: 14px;
+}
+
+
+
+.roma-article-content {
+    padding: 45px 65px 50px;
+
+    color: #444444;
+
+    font-size: 16px;
+    line-height: 2.35;
+
+    text-align: justify;
+}
+
+.roma-article-content p {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.roma-article-content h2,
+.roma-article-content h3,
+.roma-article-content h4 {
+    margin-top: 35px;
+    margin-bottom: 18px;
+
+    color: #222222;
+
+    line-height: 1.8;
+}
+
+.roma-article-content h2 {
+    font-size: 25px;
+}
+
+.roma-article-content h3 {
+    font-size: 21px;
+}
+
+.roma-article-content h4 {
+    font-size: 18px;
+}
+
+.roma-article-content a {
+    color: #22c4c1;
+    text-decoration: none;
+}
+
+.roma-article-content a:hover {
+    color: #159f9c;
+}
+
+.roma-article-content ul,
+.roma-article-content ol {
+    padding-right: 25px;
+    margin-bottom: 25px;
+}
+
+.roma-article-content li {
+    margin-bottom: 8px;
+}
+
+.roma-article-content blockquote {
+    margin: 30px 0;
+    padding: 18px 22px;
+
+    border-right: 4px solid #22c4c1;
+
+    background: #f8fafa;
+
+    border-radius: 8px;
+
+    color: #555555;
+}
+
+.roma-article-content img {
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+
+    margin: 25px auto;
+
+    border-radius: 12px;
+}
+
+
+
+.roma-article-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 65px 35px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.roma-back-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #22c4c1;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.roma-back-link:hover {
+    color: #159f9c;
+    text-decoration: none;
+}
+
+.roma-back-link span {
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+.roma-back-link:hover span {
+    transform: translateX(4px);
+}
+
+
+.roma-article-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.roma-article-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.09);
+}
+
+
+@media (max-width: 992px) {
+
+    .roma-article-wrapper {
+        width: 94%;
+    }
+
+    .roma-article-header {
+        padding: 35px 35px 25px;
+    }
+
+    .roma-article-title {
+        font-size: 29px;
+    }
+
+    .roma-article-image-wrapper {
+        padding: 0 25px;
+    }
+
+    .roma-article-image {
+        height: 420px;
+    }
+
+    .roma-article-content {
+        padding: 35px 40px 40px;
+    }
+
+    .roma-article-footer {
+        padding: 25px 40px 30px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .roma-article-page {
+        padding: 20px 0 40px;
+    }
+
+    .roma-article-wrapper {
+        width: 94%;
+    }
+
+    .roma-article-header {
+        padding: 30px 20px 22px;
+    }
+
+    .roma-article-title {
+        font-size: 24px;
+        line-height: 1.9;
+    }
+
+    .roma-article-meta {
+        font-size: 12px;
+    }
+
+    .roma-article-image-wrapper {
+        padding: 0 15px;
+    }
+
+    .roma-article-image {
+        height: 300px;
+    }
+
+    .roma-article-no-image {
+        height: 200px;
+        margin: 0 15px;
+    }
+
+    .roma-article-content {
+        padding: 30px 20px 35px;
+
+        font-size: 15px;
+        line-height: 2.2;
+    }
+
+    .roma-article-content h2 {
+        font-size: 22px;
+    }
+
+    .roma-article-content h3 {
+        font-size: 19px;
+    }
+
+    .roma-article-footer {
+        padding: 20px;
+    }
+
+}

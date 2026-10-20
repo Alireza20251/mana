@@ -1,4 +1,5 @@
 ﻿
+
 @font-face {
     font-family: "IRANSans";
     src: url("../Fonts/IRANSansWeb(FaNum).eot"); /* IE9 Compat Modes */
@@ -5614,3 +5615,155 @@ font-size:1.5rem!important
     margin-top: .8em !important;
 }
 
+/* =========================================
+   ROMA HEADER
+========================================= */
+
+.roma-header {
+    position: relative;
+    z-index: 100;
+    margin-bottom: 20px;
+}
+
+.roma-header .header_container {
+    background: #fff;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.07);
+}
+
+.roma-header .menu_wrapper {
+    border: none;
+}
+
+.roma-header .container {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+
+.roma-menu .roma-logo {
+    margin-left: 25px;
+}
+
+.roma-menu .roma-logo a {
+    display: flex !important;
+    align-items: center;
+    height: 86px;
+}
+
+.roma-menu .roma-logo img {
+    width: 65px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Main menu */
+
+.roma-menu {
+    display: flex;
+    align-items: center;
+    height: 86px;
+}
+
+.roma-menu > li > a {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    height: 86px;
+    padding: 0 17px !important;
+
+    color: #333 !important;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all .25s ease;
+}
+
+/* Hover */
+
+.roma-menu > li:not(.roma-logo) > a:hover {
+    color: #22c4c1 !important;
+}
+
+/* Active / current */
+
+.roma-menu > li > a.current,
+.roma-menu > li.current-menu-item > a {
+    color: #22c4c1 !important;
+}
+
+/* Active underline */
+
+.roma-menu > li:not(.roma-logo) > a::after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    right: 17px;
+    left: 17px;
+
+    height: 2px;
+    border-radius: 10px;
+
+    background: #22c4c1;
+
+    transform: scaleX(0);
+    transition: transform .25s ease;
+}
+
+.roma-menu > li:not(.roma-logo) > a:hover::after,
+.roma-menu > li.current-menu-item > a::after {
+    transform: scaleX(1);
+}
+
+/* Search icon */
+
+.roma-search-icon {
+    cursor: pointer;
+    color: #333;
+    font-size: 17px;
+    transition: all .25s ease;
+}
+
+.roma-search-icon:hover {
+    color: #22c4c1;
+}
+
+/* Search box */
+
+.roma-search {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.roma-search .search-field {
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 10px;
+    background: #f8f9fa;
+    height: 42px;
+    padding: 0 15px;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: all .25s ease;
+}
+
+.roma-search .search-field:focus {
+    outline: none;
+    border-color: #22c4c1 !important;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(34, 196, 193, .10);
+}
+
+.roma-search button {
+    border: none;
+    background: transparent;
+    color: #555;
+    transition: all .25s ease;
+}
+
+.roma-search button:hover {
+    color: #22c4c1;
+}

@@ -1,63 +1,100 @@
-<footer class="fdemo3 pt-4 pb-2">
-    <div class="container footer-wrap">
-        <div class="row py-3">
-            <div class="col-lg-4 col-md-6  col-sm-12 mb-4 order-lg-0 order-3">
-                <div class="pl-md-4 mb-2 text-right">
 
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
-                    </p>
-                    <ul class="standard_social_links mt-2 float-right">
+<footer class="roma-footer">
 
-                        <li class="round-btn btn-facebook">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
+    <div class="roma-footer-container">
 
-                        <li class="round-btn btn-instagram">
-                            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <li class="round-btn btn-whatsapp">
-                            <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        <!-- معرفی روما -->
+        <div class="roma-footer-main">
 
-                        </li>
-                        <li class="round-btn btn-telegram">
-                            <a href="#"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a>
-                        </li>
+            <div class="roma-footer-brand-column">
 
-                    </ul>
+                <a href="index.php" class="roma-footer-brand">
+                    <span class="roma-footer-brand-mark">ر</span>
 
-                </div>
+                    <span class="roma-footer-brand-copy">
+                        <strong>روما</strong>
+                        <small>رسانه / مجله</small>
+                    </span>
+                </a>
+
+                <p class="roma-footer-description">
+                    روما جایی برای خواندن، یادگیری و کشف مطالب تازه است.
+                    مقالات متنوع بخوانید، ایده‌های جدید پیدا کنید
+                    و دانسته‌هایتان را با دیگران به اشتراک بگذارید.
+                </p>
+
+                <a href="contact.php" class="roma-footer-contribute">
+                    <span>مقاله‌ات رو با روما به اشتراک بذار</span>
+                    <span aria-hidden="true">←</span>
+                </a>
+
             </div>
 
-            <div class="col-lg-2 col-md-6 col-sm-6 mb-4 order-lg-1 order-0">
-                <h3>لینک های سریع</h3>
-                <ul class="footer-category">
-                    <li>
-                        <a href="Index_demo1.html"><i class="fal fa-angle-left ml-2"></i>صفحه اصلی</a>
-                    </li>
-                    <li>
-                        <a href="Service.html"><i class="fal fa-angle-left ml-2"></i>مقالات</a>
-                    </li>
-                    <li>
-                        <a href="aboutus.html"><i class="fal fa-angle-left ml-2"></i>درباره ما</a>
-                    </li>
-                    <li>
-                        <a href="ContactUs.html"><i class="fal fa-angle-left ml-2"></i>تماس با ما</a>
-                    </li>
+            <!-- لینک‌های سریع -->
+            <nav class="roma-footer-column" aria-label="لینک‌های اصلی">
+
+                <h3>دسترسی سریع</h3>
+
+                <ul>
+                    <li><a href="index.php">صفحه اصلی</a></li>
+                    <li><a href="articles.php">همه مقالات</a></li>
+                    <li><a href="about.php">درباره روما</a></li>
+                    <li><a href="contact.php">ارتباط با روما</a></li>
                 </ul>
+
+            </nav>
+
+            <!-- بخش‌های مجله -->
+            <nav class="roma-footer-column" aria-label="بخش‌های مجله">
+
+                <h3>مجله روما</h3>
+
+                <ul>
+                    <li><a href="search.php">جست‌وجو در سایت</a></li>
+                    <li><a href="articles.php">مطالعه مقالات</a></li>
+                    <li><a href="contact.php">ارسال مقاله</a></li>
+                    <li><a href="auth/visitor_login.php">حساب کاربری</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- دعوت به مشارکت -->
+            <div class="roma-footer-join">
+
+                <span class="roma-footer-join-label">
+                    همراه روما باش
+                </span>
+
+                <h3>دانسته‌هات رو به اشتراک بذار.</h3>
+
+                <p>
+                    مطلب مفیدی داری؟ برای بررسی و انتشار در روما ارسالش کن.
+                </p>
+
+                <a href="contact.php" class="roma-footer-join-button">
+                    ارسال مقاله
+                    <span aria-hidden="true">←</span>
+                </a>
+
             </div>
 
-
-            <div class="col-lg-4 col-md-6 col-sm-12 px-md-3 mb-4 order-lg-3  order-4">
-                <h3>عضویت در خبرنامه</h3>
-                <p> ثبت نام کنید و آخرین نکات را از طریق ایمیل دریافت کنید ، جهت ثبت نام فقط کافی ست که آدرس ایمیل را در کادر زیر وارد نمایید</p>
-                <form class="newsletter p_relative mt-3">
-                    <input type="text" placeholder="آدرس ایمیل">
-                    <button class="newsletter_submit_btn" type="submit"><i class="fab fa-telegram-plane"></i></button>
-                </form>
-            </div>
         </div>
 
+        <!-- نوار پایانی -->
+        <div class="roma-footer-bottom">
+
+            <p>
+                © <?php echo date('Y'); ?> روما
+                <span class="roma-footer-separator">•</span>
+                تمامی حقوق محفوظ است.
+            </p>
+
+            <a href="index.php" class="roma-footer-bottom-link">
+                خواندن، یادگیری، کشف
+                <span aria-hidden="true">↗</span>
+            </a>
+
+        </div>
 
     </div>
 

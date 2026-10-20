@@ -1,0 +1,515 @@
+
+.roma-edit-article-page {
+    direction: rtl;
+    color: #2d3c42;
+    padding-bottom: 35px;
+}
+
+.roma-edit-article-page * {
+    box-sizing: border-box;
+}
+
+/* سربرگ */
+
+.roma-edit-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 30px;
+    margin-bottom: 22px;
+    background: linear-gradient(115deg, #e8f9f8, #ffffff);
+    border: 1px solid #d9efed;
+    border-radius: 18px;
+}
+
+.roma-edit-badge {
+    display: inline-block;
+    padding: 6px 13px;
+    margin-bottom: 10px;
+    color: #148f8c;
+    background: #d9f4f2;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.roma-edit-hero h1 {
+    margin: 0 0 9px;
+    color: #26383e;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.roma-edit-hero p {
+    margin: 0;
+    color: #78878c;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.roma-edit-hero-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    color: #159d99;
+    background: #dff6f4;
+    border: 1px solid #ccefeb;
+    border-radius: 21px;
+    font-size: 32px;
+}
+
+/* نویسنده مقاله */
+
+.roma-edit-author {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+    padding: 17px 21px;
+    background: #ffffff;
+    border: 1px solid #e7eeee;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(35, 54, 62, 0.025);
+}
+
+.roma-edit-author-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    color: #159d99;
+    background: #e4f8f6;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.roma-edit-author-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.roma-edit-author-label {
+    color: #879499;
+    font-size: 11px;
+}
+
+.roma-edit-author-info strong {
+    color: #34474d;
+    font-size: 13px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.roma-edit-author-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.roma-edit-author-badge.visitor {
+    color: #946b17;
+    background: #fff5dc;
+    border: 1px solid #f2e4bd;
+}
+
+.roma-edit-author-badge.admin {
+    color: #247fa0;
+    background: #eaf7fc;
+    border: 1px solid #d4edf7;
+}
+
+/* کارت اصلی */
+
+.roma-edit-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e8edef;
+    border-radius: 17px;
+    box-shadow: 0 6px 24px rgba(35, 54, 62, 0.045);
+}
+
+.roma-edit-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 28px;
+    border-bottom: 1px solid #edf1f2;
+}
+
+.roma-edit-card-header h2 {
+    margin: 0 0 7px;
+    color: #30434a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.roma-edit-card-header p {
+    margin: 0;
+    color: #849196;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.roma-edit-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    color: #159d99 !important;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+
+.roma-edit-back-link:hover {
+    color: #107b78 !important;
+}
+
+.roma-edit-back-link span {
+    font-size: 18px;
+}
+
+/* خطا */
+
+.roma-edit-error {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 22px 28px 0;
+    padding: 14px 16px;
+    color: #a83f46;
+    background: #fff2f2;
+    border: 1px solid #f6dada;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.roma-edit-error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    color: #ffffff;
+    background: #d95761;
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+/* فرم */
+
+.roma-edit-form {
+    padding: 28px;
+}
+
+.roma-edit-field {
+    min-width: 0;
+    margin-bottom: 25px;
+}
+
+.roma-edit-field > label {
+    display: block;
+    margin-bottom: 10px;
+    color: #3c5056;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.roma-edit-field > label > span {
+    color: #df7272;
+}
+
+.roma-edit-field input[type="text"],
+.roma-edit-field textarea,
+.roma-edit-field select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 14px;
+    color: #34464c;
+    background: #fbfcfc;
+    border: 1px solid #dfe7e9;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.9;
+    transition: border-color 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.roma-edit-field input[type="text"],
+.roma-edit-field select {
+    min-height: 48px;
+}
+
+.roma-edit-field textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+.roma-edit-field input[type="text"]:focus,
+.roma-edit-field textarea:focus,
+.roma-edit-field select:focus {
+    background: #ffffff;
+    border-color: #22c4c1;
+    box-shadow: 0 0 0 3px rgba(34, 196, 193, 0.10);
+}
+
+/* دسته‌بندی و وضعیت */
+
+.roma-edit-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* تصویر فعلی */
+
+.roma-edit-current-image,
+.roma-edit-no-image {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 16px;
+    background: #f8fbfb;
+    border: 1px solid #e6eeee;
+    border-radius: 12px;
+}
+
+.roma-edit-current-image img {
+    display: block;
+    flex-shrink: 0;
+    width: 125px;
+    height: 90px;
+    object-fit: cover;
+    background: #eef3f3;
+    border: 1px solid #e1eaea;
+    border-radius: 10px;
+}
+
+.roma-edit-current-image strong,
+.roma-edit-no-image strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #3c5056;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.roma-edit-current-image p,
+.roma-edit-no-image p {
+    margin: 0;
+    color: #879499;
+    font-size: 11px;
+    line-height: 2;
+}
+
+.roma-edit-no-image > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    color: #159d99;
+    background: #e4f8f6;
+    border-radius: 13px;
+    font-size: 24px;
+}
+
+/* انتخاب تصویر جدید */
+
+.roma-edit-upload {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 21px;
+    background: #f8fbfb;
+    border: 1px dashed #b9dedd;
+    border-radius: 13px;
+}
+
+.roma-edit-upload-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    color: #159d99;
+    background: #e3f7f5;
+    border-radius: 15px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.roma-edit-upload-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.roma-edit-upload-content strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #3c5056;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.roma-edit-upload-content p {
+    margin: 0 0 12px;
+    color: #879499;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.roma-edit-upload input[type="file"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    color: #65767c;
+    font-family: inherit;
+    font-size: 11px;
+}
+
+/* دکمه‌ها */
+
+.roma-edit-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #edf1f2;
+}
+
+.roma-edit-submit,
+.roma-edit-cancel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 45px;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.roma-edit-submit {
+    color: #ffffff;
+    background: linear-gradient(135deg, #26c5c0, #159d99);
+    border: 1px solid #22b8b3;
+    cursor: pointer;
+    box-shadow: 0 5px 13px rgba(34, 196, 193, 0.14);
+}
+
+.roma-edit-submit:hover {
+    color: #ffffff;
+    background: #159d99;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(34, 196, 193, 0.2);
+}
+
+.roma-edit-submit span {
+    font-size: 17px;
+}
+
+.roma-edit-cancel {
+    color: #607178 !important;
+    background: #f4f7f7;
+    border: 1px solid #e3eaea;
+}
+
+.roma-edit-cancel:hover {
+    color: #34464c !important;
+    background: #eaf0f0;
+}
+
+/* نمایش در صفحه‌های کوچک‌تر */
+
+@media (max-width: 760px) {
+    .roma-edit-hero {
+        padding: 23px;
+    }
+
+    .roma-edit-hero h1 {
+        font-size: 22px;
+    }
+
+    .roma-edit-fields-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .roma-edit-form {
+        padding: 22px;
+    }
+
+    .roma-edit-card-header {
+        padding: 22px;
+    }
+
+    .roma-edit-error {
+        margin-right: 22px;
+        margin-left: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .roma-edit-hero-icon {
+        width: 53px;
+        height: 53px;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+
+    .roma-edit-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .roma-edit-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .roma-edit-submit,
+    .roma-edit-cancel {
+        width: 100%;
+    }
+
+    .roma-edit-upload {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .roma-edit-current-image {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

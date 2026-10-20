@@ -1,0 +1,556 @@
+
+.roma-admin-edit {
+    direction: rtl;
+    color: #293945;
+    padding-bottom: 40px;
+}
+
+.r-user-edit-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+/* عنوان صفحه */
+
+.r-user-edit-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.r-user-edit-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+    color: #fff;
+    background: linear-gradient(135deg, #22c4c1, #159f9d);
+    box-shadow: 0 8px 18px rgba(34, 196, 193, 0.2);
+}
+
+.r-user-edit-heading-icon span {
+    font-size: 29px;
+    line-height: 1;
+}
+
+.r-user-edit-heading-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.r-user-edit-heading-text h1 {
+    margin: 0 0 7px;
+    color: #263541;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.r-user-edit-heading-text p {
+    margin: 0;
+    color: #8a96a3;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.r-user-edit-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 15px;
+    border: 1px solid #e5ecef;
+    border-radius: 11px;
+    background: #fff;
+    color: #566673;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.r-user-edit-back span {
+    font-size: 18px;
+}
+
+.r-user-edit-back:hover {
+    color: #159f9d;
+    border-color: #a5e9e7;
+    background: #f2ffff;
+    transform: translateY(-1px);
+}
+
+/* کارت اصلی */
+
+.r-user-edit-card {
+    overflow: hidden;
+    border: 1px solid #e9eff1;
+    border-radius: 19px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(36, 62, 78, 0.045);
+}
+
+.r-user-edit-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 30px;
+    border-bottom: 1px solid #edf1f3;
+    background: linear-gradient(120deg, #fff, #f8ffff);
+}
+
+.r-user-edit-card-header h2 {
+    margin: 0 0 7px;
+    color: #293b47;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.r-user-edit-card-header p {
+    margin: 0;
+    color: #8c98a3;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.r-user-edit-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #c9f3f1;
+    border-radius: 30px;
+    color: #159c99;
+    background: #edfffe;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.r-user-edit-card-body {
+    padding: 30px;
+}
+
+/* پیام‌ها */
+
+.r-user-edit-alert {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 14px 16px;
+    margin-bottom: 24px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.r-user-edit-alert-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.r-user-edit-alert-error {
+    color: #a82d3a;
+    border-color: #f7d6d9;
+    background: #fff4f5;
+}
+
+.r-user-edit-alert-error .r-user-edit-alert-icon {
+    color: #fff;
+    background: #db5967;
+}
+
+.r-user-edit-alert-success {
+    color: #157c59;
+    border-color: #cceede;
+    background: #f0fff7;
+}
+
+.r-user-edit-alert-success .r-user-edit-alert-icon {
+    color: #fff;
+    background: #29ae7b;
+}
+
+/* مشخصات مدیر */
+
+.r-user-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    padding: 18px;
+    border: 1px solid #e9f0f2;
+    border-radius: 14px;
+    background: #fbfefe;
+}
+
+.r-user-profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 76px;
+    width: 76px;
+    height: 76px;
+    overflow: hidden;
+    border: 3px solid #d9f7f5;
+    border-radius: 50%;
+    background: #dffffe;
+    color: #169e9b;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.r-user-profile-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.r-user-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.r-user-profile-info strong {
+    color: #2c414d;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.r-user-profile-info span {
+    color: #8a98a2;
+    font-size: 12px;
+}
+
+/* فرم */
+
+.r-user-edit-form {
+    width: 100%;
+}
+
+.r-user-edit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 24px;
+}
+
+.r-user-edit-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.r-user-edit-field > label {
+    display: block;
+    margin-bottom: 10px;
+    color: #374854;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.r-user-required {
+    color: #e45e6d;
+    font-weight: 800;
+}
+
+.r-user-edit-optional {
+    margin-right: 5px;
+    color: #99a4ad;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.r-user-edit-input {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 15px;
+    border: 1px solid #e1e9ec;
+    border-radius: 11px;
+    outline: none;
+    background: #fbfcfd;
+    color: #293b47;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.8;
+    box-sizing: border-box;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.r-user-edit-input::placeholder {
+    color: #aab4bc;
+    opacity: 1;
+}
+
+.r-user-edit-input:hover:not(:disabled) {
+    border-color: #c7d8dd;
+}
+
+.r-user-edit-input:focus {
+    border-color: #22c4c1;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(34, 196, 193, 0.12);
+}
+
+.r-user-email-disabled {
+    color: #87949d;
+    background: #f1f4f6;
+    cursor: not-allowed;
+}
+
+.r-user-edit-hint {
+    display: block;
+    margin-top: 8px;
+    color: #919da7;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* آپلود تصویر */
+
+.r-user-edit-file-box {
+    position: relative;
+    min-height: 90px;
+    overflow: hidden;
+    border: 1px dashed #c5d9dc;
+    border-radius: 12px;
+    background: #f9fdfd;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.r-user-edit-file-box:hover {
+    border-color: #22c4c1;
+    background: #f2ffff;
+}
+
+.r-user-edit-file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.r-user-edit-file-label {
+    display: flex !important;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    min-height: 90px;
+    margin: 0 !important;
+    padding: 17px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.r-user-edit-file-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 43px;
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+    color: #159f9c;
+    background: #dffffe;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.r-user-edit-file-label strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #3a4c57;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.r-user-edit-file-label small {
+    display: block;
+    color: #8d9ba4;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* دکمه‌ها */
+
+.r-user-edit-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 32px;
+    padding-top: 23px;
+    border-top: 1px solid #edf1f3;
+}
+
+.r-user-edit-footer > p {
+    margin: 0;
+    color: #8b97a1;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.r-user-edit-actions {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.r-user-edit-cancel,
+.r-user-edit-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.r-user-edit-cancel {
+    border: 1px solid #e3e9ec;
+    color: #62717c;
+    background: #fff;
+}
+
+.r-user-edit-cancel:hover {
+    color: #344653;
+    border-color: #cbd7dc;
+    background: #f8fafb;
+}
+
+.r-user-edit-submit {
+    border: 1px solid #20b8b5;
+    color: #fff;
+    background: linear-gradient(135deg, #29ceca, #19aaa7);
+    box-shadow: 0 6px 14px rgba(34, 196, 193, 0.17);
+}
+
+.r-user-edit-submit span {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.r-user-edit-submit:hover {
+    border-color: #169b99;
+    background: linear-gradient(135deg, #20b9b6, #128e8c);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(34, 196, 193, 0.24);
+}
+
+.r-user-edit-cancel:focus-visible,
+.r-user-edit-submit:focus-visible,
+.r-user-edit-back:focus-visible,
+.r-user-edit-file-label:focus-visible {
+    outline: 3px solid rgba(34, 196, 193, 0.35);
+    outline-offset: 3px;
+}
+
+/* نمایشگرهای باریک */
+
+@media (max-width: 900px) {
+    .r-user-edit-container {
+        padding: 20px 15px;
+    }
+
+    .r-user-edit-card-header,
+    .r-user-edit-card-body {
+        padding: 23px;
+    }
+
+    .r-user-edit-heading-text h1 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 650px) {
+    .r-user-edit-heading {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .r-user-edit-heading-icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+    }
+
+    .r-user-edit-heading-text {
+        flex: 1;
+    }
+
+    .r-user-edit-heading-text h1 {
+        font-size: 19px;
+    }
+
+    .r-user-edit-back {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .r-user-edit-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .r-user-edit-card-body {
+        padding: 20px;
+    }
+
+    .r-user-edit-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 21px;
+    }
+
+    .r-user-edit-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .r-user-edit-actions {
+        width: 100%;
+    }
+
+    .r-user-edit-cancel,
+    .r-user-edit-submit {
+        flex: 1;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}

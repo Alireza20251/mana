@@ -1,47 +1,102 @@
-﻿
-//collapsible
-$(document).ready(function () {
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+﻿"use strict";
 
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
+/* =========================================
+   Roma - Custom JavaScript
+========================================= */
+
+/*
+|--------------------------------------------------------------------------
+| ابزار مشترک برای اجرای امن اسلایدرها
+|--------------------------------------------------------------------------
+*/
+
+function initRomaOwl(selector, options) {
+    if (
+        typeof jQuery === "undefined" ||
+        !jQuery.fn ||
+        typeof jQuery.fn.owlCarousel !== "function"
+    ) {
+        return;
+    }
+
+    jQuery(selector).each(function () {
+        var $carousel = jQuery(this);
+
+        // جلوگیری از راه‌اندازی دوباره اسلایدر
+        if ($carousel.hasClass("owl-loaded")) {
+            return;
+        }
+
+        $carousel.owlCarousel(options);
+    });
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| باز و بسته شدن بخش‌های collapsible
+|--------------------------------------------------------------------------
+*/
+
+function initCollapsible() {
+    var collapsibles = document.getElementsByClassName("collapsible");
+
+    Array.prototype.forEach.call(collapsibles, function (element) {
+        if (element.dataset.romaCollapsibleInitialized === "true") {
+            return;
+        }
+
+        element.dataset.romaCollapsibleInitialized = "true";
+
+        element.addEventListener("click", function () {
             this.classList.toggle("active");
+
             var content = this.nextElementSibling;
+
+            if (!content) {
+                return;
+            }
+
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
             }
         });
-    }
-
-});
-
+    });
+}
 
 
-//Tejarat vizhe 
+/*
+|--------------------------------------------------------------------------
+| اسلایدر اصلی
+|--------------------------------------------------------------------------
+*/
+
 function mainslider() {
-    jQuery('#owl-mainslider').owlCarousel({
+    initRomaOwl("#owl-mainslider", {
         items: 1,
         nav: true,
-        dots:false,
-        //margin: 10,
+        dots: false,
         autoplay: true,
         loop: true,
         mouseDrag: true,
         touchDrag: true,
         autoplayHoverPause: true,
         smartSpeed: 1500,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 5000
     });
 }
 
 
-//event
+/*
+|--------------------------------------------------------------------------
+| اسلایدر رویدادها - نوع ۱
+|--------------------------------------------------------------------------
+*/
+
 function owlevent1() {
-    jQuery('.owl-event1').owlCarousel({
-        //items: 3,
+    initRomaOwl(".owl-event1", {
         rtl: true,
         loop: true,
         nav: true,
@@ -52,27 +107,33 @@ function owlevent1() {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 1
             },
             410: {
-                items: 2,
+                items: 2
             },
             576: {
-                items: 3,
+                items: 3
             },
             769: {
-                items: 4,
+                items: 4
             },
             1200: {
-                items: 5,
+                items: 5
             }
         }
     });
 }
 
-function owlevent5() {
-    jQuery('.owl-event5').owlCarousel({
-        //items: 3,
+
+/*
+|--------------------------------------------------------------------------
+| اسلایدر رویدادها - نوع ۴
+|--------------------------------------------------------------------------
+*/
+
+function owlevent4() {
+    initRomaOwl(".owl-event4", {
         rtl: true,
         loop: true,
         nav: true,
@@ -83,61 +144,101 @@ function owlevent5() {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
-            },
-            410: {
-                items: 2,
-            },
-            576: {
-                items: 3,
-            },
-            769: {
-                items: 4,
-            },
-            1200: {
-                items: 3,
-            }
-        }
-    });
-}
-
-
-//event
-function owldemo5() {
-    jQuery('.owl-demo5').owlCarousel({
-        rtl: true,
-        loop: true,
-        dots:true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        autoplayTimeout: 8000,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
+                items: 1
             },
             490: {
-                items: 2,
-            },
-            577: {
-                items: 3,
+                items: 2
             },
             769: {
-                items: 4,
-            },
-            1200: {
-                items: 5,
+                items: 3
             }
         }
     });
 }
 
 
+/*
+|--------------------------------------------------------------------------
+| اسلایدر رویدادها - نوع ۵
+|--------------------------------------------------------------------------
+*/
 
-//popular doctors_index_page
+function owlevent5() {
+    initRomaOwl(".owl-event5", {
+        rtl: true,
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        autoplayTimeout: 8000,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            410: {
+                items: 2
+            },
+            576: {
+                items: 3
+            },
+            769: {
+                items: 4
+            },
+            1200: {
+                items: 3
+            }
+        }
+    });
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| اسلایدر نمایشی
+|--------------------------------------------------------------------------
+*/
+
+function owldemo5() {
+    initRomaOwl(".owl-demo5", {
+        rtl: true,
+        loop: true,
+        dots: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        autoplayTimeout: 8000,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            490: {
+                items: 2
+            },
+            577: {
+                items: 3
+            },
+            769: {
+                items: 4
+            },
+            1200: {
+                items: 5
+            }
+        }
+    });
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| اسلایدر مقالات برتر
+|--------------------------------------------------------------------------
+*/
+
 function owltoparticle() {
-    jQuery('#owl-toparticle').owlCarousel({
+    initRomaOwl("#owl-toparticle", {
         rtl: true,
         loop: true,
         nav: true,
@@ -147,91 +248,59 @@ function owltoparticle() {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 1
             },
             480: {
-                items: 1,
+                items: 1
             },
             768: {
-                items: 2,
+                items: 2
             },
-       
             1200: {
                 items: 4
-            }
-              , 1367: {
-                  items: 4,
-              }
-        }
-    });
-}
-
-
-function owlevent4() {
-    jQuery('.owl-event4').owlCarousel({
-        //items: 3,
-        rtl: true,
-        loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        smartSpeed: 1500,
-        autoplayTimeout: 8000,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
             },
-            490: {
-                items: 2,
-            },
-           769: {
-                items: 3,
+            1367: {
+                items: 4
             }
         }
     });
 }
 
 
+/*
+|--------------------------------------------------------------------------
+| اسلایدر مطالب ویژه
+|--------------------------------------------------------------------------
+*/
 
-//function selectproduct() {
-//    $("#single").select2({
-//        allowClear: true
-//    });
-//    $("#single2").select2({
-//        allowClear: true
-//    });
-//    $("#single3").select2({
-//        allowClear: true
-//    });
-
-//}
-
-//Tejarat vizhe 
 function owlNtejari() {
-    jQuery('#owl-Ntejari').owlCarousel({
+    initRomaOwl("#owl-Ntejari", {
         items: 1,
         nav: false,
         dots: true,
-        margin:10,
+        margin: 10,
         autoplay: true,
         loop: true,
         mouseDrag: true,
         touchDrag: true,
         autoplayHoverPause: true,
         smartSpeed: 1500,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 5000
     });
 }
 
 
-//Tamin_vizhe 
+/*
+|--------------------------------------------------------------------------
+| اسلایدر تأمین‌کنندگان
+|--------------------------------------------------------------------------
+*/
+
 function owlTamin() {
-    jQuery('#owl-Tamin').owlCarousel({
-        //items: 3,
+    initRomaOwl("#owl-Tamin", {
         rtl: true,
         loop: true,
-        dots:true,
+        dots: true,
         nav: false,
         autoplay: true,
         autoplayHoverPause: true,
@@ -240,29 +309,33 @@ function owlTamin() {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 2,
+                items: 2
             },
             480: {
-                items: 3,
+                items: 3
             },
             767: {
-                items: 5,
+                items: 5
             },
             992: {
-                items: 3,
+                items: 3
             },
             1200: {
-                items: 5,
+                items: 5
             }
         }
     });
 }
 
 
-//Tamin_vizhe 
+/*
+|--------------------------------------------------------------------------
+| اسلایدر مشتریان
+|--------------------------------------------------------------------------
+*/
+
 function owlcustomer() {
-    jQuery('#owl-customer').owlCarousel({
-        //items: 3,
+    initRomaOwl("#owl-customer", {
         rtl: true,
         loop: true,
         dots: true,
@@ -274,30 +347,34 @@ function owlcustomer() {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 2,
+                items: 2
             },
             480: {
-                items: 3,
+                items: 3
             },
             768: {
-                items: 4,
+                items: 4
             },
             992: {
-                items: 5,
+                items: 5
             },
             1200: {
-                items: 6,
+                items: 6
             }
         }
     });
 }
 
 
+/*
+|--------------------------------------------------------------------------
+| اسلایدر داستان‌ها
+|--------------------------------------------------------------------------
+*/
 
-//owl-story 
 function owlStory() {
-    jQuery('#owl-Story').owlCarousel({
-        items:1,
+    initRomaOwl("#owl-Story", {
+        items: 1,
         rtl: true,
         loop: true,
         dots: true,
@@ -305,17 +382,19 @@ function owlStory() {
         autoplay: true,
         autoplayHoverPause: true,
         smartSpeed: 1300,
-        autoplayTimeout: 5000,
-        });
+        autoplayTimeout: 5000
+    });
 }
 
 
+/*
+|--------------------------------------------------------------------------
+| اسلایدر دوره‌ها
+|--------------------------------------------------------------------------
+*/
 
-
-
-//popular doctors_index_page
 function owlcourse() {
-    jQuery('.owl-course').owlCarousel({
+    initRomaOwl(".owl-course", {
         rtl: true,
         loop: true,
         nav: true,
@@ -327,113 +406,237 @@ function owlcourse() {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 1
             },
             510: {
-                items: 2,
+                items: 2
             },
             830: {
-                items: 3,
+                items: 3
             },
-    
             1200: {
                 items: 3
+            },
+            1367: {
+                items: 4
             }
-              , 1367: {
-                  items: 4,
-              }
         }
     });
 }
 
 
+/*
+|--------------------------------------------------------------------------
+| جدول قیمت‌گذاری
+| این تابع فقط در صورت وجود جدول قیمت‌گذاری اجرا می‌شود.
+|--------------------------------------------------------------------------
+*/
 
-
-
-//prcingtable
 function prcingtable() {
-    $("ul").on("click", "li", function () {
-        var pos = $(this).index() + 2;
-        $("tr").find('td:not(:eq(0))').hide();
-        $('td:nth-child(' + pos + ')').css('display', 'table-cell');
-        $("tr").find('th:not(:eq(0))').hide();
-        $('li').removeClass('active');
-        $(this).addClass('active');
-    });
+    var $ = jQuery;
 
-    // Initialize the media query
-    var mediaQuery = window.matchMedia('(min-width: 640px)');
+    var $pricingContainers = $(
+        ".pricing-table, .pricingtable, #pricing-table, " +
+        ".pricing-table-container, .price-table"
+    );
 
-    // Add a listen event
-    mediaQuery.addListener(doSomething);
-
-    // Function to do something with the media query
-    function doSomething(mediaQuery) {
-        if (mediaQuery.matches) {
-            $('.sep').attr('colspan', 6);
-        } else {
-            $('.sep').attr('colspan', 2);
-        }
+    if (!$pricingContainers.length) {
+        return;
     }
 
-    // On load
-    doSomething(mediaQuery);
-}
+    $pricingContainers.each(function () {
+        var $container = $(this);
 
+        var $table = $container.is("table")
+            ? $container
+            : $container.find("table").first();
 
-// teletype
-function teletype() {
-    jQuery('.animated-text').typed({
-        strings: [
+        var $tabs = $container.find("ul").first();
 
-            " قالب چند منظوره شمیم :)  ",
-            " سامانه جامع برترین کارشناسان  ",
-            " تسهیل در خدمات ..  ",
-            " طراحی انواع وب سایت ..  ",
-        ],
-        typeSpeed: 130,
-        loop: true,
+        if (!$table.length || !$tabs.length) {
+            return;
+        }
+
+        $tabs
+            .off("click.romaPricing")
+            .on("click.romaPricing", "li", function (event) {
+                event.preventDefault();
+
+                var position = $(this).index() + 1;
+
+                $table.find("tr").each(function () {
+                    var $cells = $(this).children("th, td");
+
+                    $cells.hide();
+
+                    // ستون اول همیشه نمایش داده می‌شود.
+                    $cells.first().css("display", "table-cell");
+
+                    // نمایش ستون انتخاب‌شده.
+                    $cells.eq(position).css("display", "table-cell");
+                });
+
+                $tabs.find("li").removeClass("active");
+                $(this).addClass("active");
+            });
+
+        // تنظیم colspan فقط برای جدول داخل همین بخش
+        function updateSeparatorColspan() {
+            var colspan = window.matchMedia("(min-width: 640px)").matches
+                ? 6
+                : 2;
+
+            $table.find(".sep").attr("colspan", colspan);
+        }
+
+        updateSeparatorColspan();
+
+        var mediaQuery = window.matchMedia("(min-width: 640px)");
+
+        if (typeof mediaQuery.addEventListener === "function") {
+            mediaQuery.addEventListener(
+                "change",
+                updateSeparatorColspan
+            );
+        } else if (typeof mediaQuery.addListener === "function") {
+            mediaQuery.addListener(updateSeparatorColspan);
+        }
     });
 }
 
 
-/**** All function are called here ******/
-$(document).ready(function () {
+/*
+|--------------------------------------------------------------------------
+| متن متحرک
+|--------------------------------------------------------------------------
+*/
 
-    mainslider(),
-    owlNtejari(),
-    owlTamin(),
-    owlStory(),
-    owlevent1(),
-    owlevent4(),
-    owlevent5(),
-    owltoparticle(),
-    owlcustomer(),
-    owldemo5(),
-    owlcourse(),
-    teletype(),
+function teletype() {
+    var $ = jQuery;
+
+    if (typeof $.fn.typed !== "function") {
+        return;
+    }
+
+    $(".animated-text").each(function () {
+        var $element = $(this);
+
+        if ($element.data("romaTypedInitialized")) {
+            return;
+        }
+
+        $element.data("romaTypedInitialized", true);
+
+        $element.typed({
+            strings: [
+                "مجله روما",
+                "مطالب تازه و کاربردی",
+                "خواندن، یادگیری و کشف",
+                "مقالات جدید روما"
+            ],
+            typeSpeed: 80,
+            loop: true
+        });
+    });
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| ابزار شماره تلفن
+|--------------------------------------------------------------------------
+*/
+
+function initRomaPhoneInput() {
+    var $ = jQuery;
+    var $telInputs = $(".phone");
+
+    if (!$telInputs.length) {
+        return;
+    }
+
+    if (typeof $.fn.intlTelInput !== "function") {
+        return;
+    }
+
+    $telInputs.each(function () {
+        var $telInput = $(this);
+
+        if ($telInput.data("romaPhoneInitialized")) {
+            return;
+        }
+
+        $telInput.data("romaPhoneInitialized", true);
+
+        $telInput.intlTelInput({
+            initialCountry: "ir",
+            preferredCountries: [
+                "ir",
+                "gb",
+                "br",
+                "ru",
+                "cn",
+                "es",
+                "it"
+            ],
+            autoPlaceholder: "aggressive",
+
+            // مسیر صحیح فایل داخل assets/Js
+            utilsScript: "assets/Js/utils.js"
+        });
+    });
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| اسلایدر Bootstrap
+|--------------------------------------------------------------------------
+*/
+
+function initRomaBootstrapCarousel() {
+    var $ = jQuery;
+    var $carousel = $("#myCarousel");
+
+    if (!$carousel.length) {
+        return;
+    }
+
+    if (typeof $.fn.carousel !== "function") {
+        return;
+    }
+
+    $carousel.carousel({
+        interval: 3000
+    });
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| راه‌اندازی قابلیت‌ها
+|--------------------------------------------------------------------------
+*/
+
+jQuery(function ($) {
+    initCollapsible();
+
+    // اسلایدرها فقط در صورت وجود عنصر مربوطه اجرا می‌شوند.
+    mainslider();
+    owlNtejari();
+    owlTamin();
+    owlStory();
+    owlevent1();
+    owlevent4();
+    owlevent5();
+    owltoparticle();
+    owlcustomer();
+    owldemo5();
+    owlcourse();
+
+    // قابلیت‌های اختیاری
+    teletype();
     prcingtable();
+    initRomaPhoneInput();
+    initRomaBootstrapCarousel();
 });
-
-
-
-
-//international phone
-let telInput = $(".phone")
-telInput.intlTelInput({
-    initialCountry: 'ir',
-    preferredCountries: ['ir', 'gb', 'br', 'ru', 'cn', 'es', 'it'],
-    autoPlaceholder: 'aggressive',
-    utilsScript: "Js/utils.js",
-})
-
-
-
-
-
-//myCarousel 2
-$('#myCarousel').carousel({
-    interval: 3000,
-})
-
-

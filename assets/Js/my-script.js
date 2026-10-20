@@ -1,166 +1,231 @@
-
 (function ($) {
     "use strict";
 
     var of_theme = {
-
         window: $(window),
-        html: $('html, body'),
         document: $(document),
-        body: $('body'),
-        //window_last_pos: 0,
-        //direction: '',
-        //ajax_filter_item_last_width: [],
-        //ajax: {},
-        //resize_timer: '',
+        body: $("body"),
+
         get_rtl: function () {
-            return of_theme.body.hasClass('rtl');
+            return of_theme.body.hasClass("rtl");
         },
 
+        /*
+         * راه‌اندازی قابلیت‌های اصلی
+         */
         document_ready: function () {
             of_theme.my_account_modal();
             of_theme.search_header();
             of_theme.canvas_menu_mobile();
-            //of_theme.of_nav_to_select();
             of_theme.of_sticky_header();
-
-
         },
 
-
-        document_resize: function () {
-            of_theme.window.resize(function () {
-
-
-            })
-        },
-
-
+        /*
+         * پنجره ورود و ثبت‌نام
+         */
         my_account_modal: function () {
-            var acc_form = $('.account_action');
-            var mask_overlay = $('.of-site-mask');
-            $('span.login_user_btn').on('click', function () {
-                mask_overlay.addClass('active');
-                acc_form.addClass('active');
-                acc_form.find('.acc_div').hide();
-                acc_form.removeClass('trbox');
-                $('.login_form').show();
+            var accForm = $(".account_action");
+            var maskOverlay = $(".of-site-mask");
 
-            });
-            $('span.singup_user_btn').on('click', function () {
-                mask_overlay.addClass('active');
-                acc_form.addClass('active');
-                acc_form.find('.acc_div').hide();
-                $('.register_form').show();
-                acc_form.addClass('trbox');
+            $("span.login_user_btn")
+                .off("click.romaAccount")
+                .on("click.romaAccount", function (event) {
+                    event.preventDefault();
 
-            });
+                    maskOverlay.addClass("active");
+                    accForm.addClass("active");
+                    accForm.find(".acc_div").hide();
+                    accForm.removeClass("trbox");
 
-            $('.of-site-mask , .close_modal').on('click', function () {
-                acc_form.removeClass('active');
-                mask_overlay.removeClass('active');
-            });
+                    $(".login_form").show();
+                });
+
+            $("span.singup_user_btn")
+                .off("click.romaAccount")
+                .on("click.romaAccount", function (event) {
+                    event.preventDefault();
+
+                    maskOverlay.addClass("active");
+                    accForm.addClass("active");
+                    accForm.find(".acc_div").hide();
+
+                    $(".register_form").show();
+                    accForm.addClass("trbox");
+                });
+
+            $(".of-site-mask, .close_modal")
+                .off("click.romaAccount")
+                .on("click.romaAccount", function () {
+                    accForm.removeClass("active");
+                    maskOverlay.removeClass("active");
+                });
         },
 
-
+        /*
+         * باز و بسته کردن جست‌وجوی هدر
+         */
         search_header: function () {
-            $('.m_search').on('click', function (e) {
-                e.preventDefault();
-                $('.search_wrap').toggleClass('active');
-                if ($('.search_wrap').hasClass('active')) {
-                    $(this).find('i').removeClass('fa-search').addClass('fa-times');
-                } else {
-                    $(this).find('i').removeClass('fa-times').addClass('fa-search');
-                }
-            });
+            $(".m_search")
+                .off("click.romaSearch")
+                .on("click.romaSearch", function (event) {
+                    event.preventDefault();
 
-        },
+                    var $button = $(this);
+                    var $searchWrap = $(".search_wrap");
+                    var $icon = $button.find("i");
 
+                    $searchWrap.toggleClass("active");
 
-        canvas_menu_mobile: function () {
-            var of_off_canvas_button = $('#of-trigger');
-            var of_off_canvas_button_close = $('#of-close-off-canvas');
-            var of_mask = $('.of-site-mask');
-
-            of_off_canvas_button.click(function () {
-                of_theme.body.toggleClass('mobile-js-menu');
-                $('body').addClass('lock-scroll');
-                return false;
-            });
-
-            of_off_canvas_button_close.click(function () {
-                of_theme.body.removeClass('mobile-js-menu');
-                $('body').removeClass('lock-scroll');
-                return false;
-            });
-
-            of_mask.click(function () {
-                of_theme.body.removeClass('mobile-js-menu');
-                $('body').removeClass('lock-scroll');
-                return false;
-            });
-
-
-            var mobile_menu = $('.mobile-menu-wrap');
-            var sub_mobile_menu = mobile_menu.find('li.menu-item-has-children');
-            var sub_mobile_a = mobile_menu.find('li.menu-item-has-children > a');
-
-            sub_mobile_a.append('<i class="explain-menu fal fa-angle-left"></i>');
-
-            $('.explain-menu').unbind('click').bind('touchend click', function (e) {
-                e.preventDefault();
-                $(this).parent('a').toggleClass('active').siblings('ul').slideToggle(500);
-            });
-
-            sub_mobile_menu.find('a').click(function (event) {
-                event.stopPropagation();
-            });
-
-            mobile_menu.click(function (event) {
-                event.stopPropagation();
-            });
-
-        },
-
-
-
-
-        of_sticky_header: function () {
-
-            if ($(".menu_sticky").length > 0) {
-
-                var offset_top = $('header').height();
-                $(window).scroll(function (event) {
-                    var currentScroll = $(this).scrollTop();
-                    if (currentScroll > offset_top) {
-                        $('.menu_sticky').addClass('my_sticky');
+                    if ($searchWrap.hasClass("active")) {
+                        $icon
+                            .removeClass("fa-search")
+                            .addClass("fa-times");
                     } else {
-                        $('.menu_sticky').removeClass('my_sticky');
+                        $icon
+                            .removeClass("fa-times")
+                            .addClass("fa-search");
+                    }
+                });
+        },
+
+        /*
+         * منوی موبایل
+         */
+        canvas_menu_mobile: function () {
+            var $body = of_theme.body;
+            var $trigger = $("#of-trigger");
+            var $closeButton = $("#of-close-off-canvas");
+            var $mask = $(".of-site-mask");
+            var $mobileMenu = $(".mobile-menu-wrap");
+
+            /*
+             * باز و بسته شدن منو با دکمه اصلی
+             */
+            $trigger
+                .off("click.romaMobileMenu")
+                .on("click.romaMobileMenu", function (event) {
+                    event.preventDefault();
+
+                    $body.toggleClass("mobile-js-menu");
+
+                    // قفل اسکرول باید با وضعیت منو هماهنگ باشد.
+                    if ($body.hasClass("mobile-js-menu")) {
+                        $body.addClass("lock-scroll");
+                    } else {
+                        $body.removeClass("lock-scroll");
                     }
                 });
 
+            /*
+             * بستن منو
+             */
+            $closeButton
+                .off("click.romaMobileMenu")
+                .on("click.romaMobileMenu", function (event) {
+                    event.preventDefault();
+
+                    $body.removeClass("mobile-js-menu lock-scroll");
+                });
+
+            /*
+             * بستن منو با کلیک روی فضای بیرون
+             */
+            $mask
+                .off("click.romaMobileMenu")
+                .on("click.romaMobileMenu", function () {
+                    $body.removeClass("mobile-js-menu lock-scroll");
+                });
+
+            /*
+             * اگر منوی موبایل در این صفحه وجود نداشته باشد،
+             * تنظیمات مربوط به آن اجرا نمی‌شوند.
+             */
+            if (!$mobileMenu.length) {
+                return;
             }
+
+            /*
+             * جلوگیری از افزودن تکراری آیکون زیرمنو
+             */
+            var $subMenuLinks = $mobileMenu.find(
+                "li.menu-item-has-children > a"
+            );
+
+            $subMenuLinks.each(function () {
+                var $link = $(this);
+
+                if (!$link.children(".explain-menu").length) {
+                    $link.append(
+                        '<i class="explain-menu fal fa-angle-left" aria-hidden="true"></i>'
+                    );
+                }
+            });
+
+            /*
+             * باز و بسته کردن زیرمنوها
+             */
+            $mobileMenu
+                .find(".explain-menu")
+                .off("click.romaSubmenu")
+                .on("click.romaSubmenu", function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    var $link = $(this).closest("a");
+                    var $submenu = $link.siblings("ul").first();
+
+                    $link.toggleClass("active");
+
+                    if ($submenu.length) {
+                        $submenu.stop(true, true).slideToggle(250);
+                    }
+                });
+
+            /*
+             * جلوگیری از انتشار کلیک به بیرون منو
+             */
+            $mobileMenu
+                .off("click.romaMobileMenu")
+                .on("click.romaMobileMenu", function (event) {
+                    event.stopPropagation();
+                });
         },
 
+        /*
+         * هدر چسبان
+         */
+        of_sticky_header: function () {
+            var $stickyMenu = $(".menu_sticky");
 
+            if (!$stickyMenu.length) {
+                return;
+            }
+
+            function updateStickyHeader() {
+                var headerHeight = $("header").first().outerHeight() || 0;
+                var scrollPosition = of_theme.window.scrollTop();
+
+                if (scrollPosition > headerHeight) {
+                    $stickyMenu.addClass("my_sticky");
+                } else {
+                    $stickyMenu.removeClass("my_sticky");
+                }
+            }
+
+            of_theme.window
+                .off("scroll.romaSticky")
+                .on("scroll.romaSticky", updateStickyHeader);
+
+            // تنظیم وضعیت هدر هنگام باز شدن صفحه
+            updateStickyHeader();
+        }
     };
 
-
-    $(document).ready(function () {
+    /*
+     * اجرای کدها پس از آماده شدن صفحه
+     */
+    $(function () {
         of_theme.document_ready();
-        of_theme.document_resize();
-
     });
 
 })(jQuery);
-
-
-
-
-
-
-
-
-
-
-

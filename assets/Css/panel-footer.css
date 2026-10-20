@@ -1,0 +1,174 @@
+
+html {
+    min-height: 100%;
+}
+
+body.small-navigation {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* محتوای اصلی پنل */
+
+body.small-navigation > .main-content {
+    flex: 1 0 auto;
+    min-width: 0;
+}
+
+/* =========================================
+   Footer
+========================================= */
+
+.roma-panel-footer {
+    direction: rtl;
+    width: 100%;
+    flex: 0 0 auto;
+    margin-top: auto;
+    border-top: 1px solid #e8eff1;
+    background: #fff;
+    color: #647782;
+    box-sizing: border-box;
+}
+
+.roma-panel-footer,
+.roma-panel-footer * {
+    box-sizing: border-box;
+}
+
+.roma-panel-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1500px;
+    min-height: 72px;
+    padding: 14px 28px;
+    margin: 0 auto;
+}
+
+/* برند روما */
+
+.roma-panel-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+
+.roma-panel-footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(135deg, #29ceca, #159f9c);
+    box-shadow: 0 5px 12px rgba(34, 196, 193, 0.15);
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.roma-panel-footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.roma-panel-footer-brand-text strong {
+    color: #2c424d;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.roma-panel-footer-brand-text span {
+    color: #8b99a2;
+    font-size: 10px;
+}
+
+/* متن کپی‌رایت */
+
+.roma-panel-footer-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: #8a98a1;
+    font-size: 11px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.roma-panel-footer-separator {
+    color: #22c4c1;
+    font-size: 15px;
+}
+
+/* لینک داشبورد */
+
+.roma-panel-footer-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #d9f2f0;
+    border-radius: 9px;
+    color: #159b98;
+    background: #f3fdfc;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.roma-panel-footer-home span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.roma-panel-footer-home:hover {
+    border-color: #22c4c1;
+    color: #fff;
+    background: #20b9b6;
+    transform: translateY(-1px);
+}
+
+.roma-panel-footer-home:focus-visible {
+    outline: 3px solid rgba(34, 196, 193, 0.3);
+    outline-offset: 3px;
+}
+
+/* نمایشگرهای باریک */
+
+@media (max-width: 700px) {
+    .roma-panel-footer-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 13px;
+        padding: 20px 16px;
+    }
+
+    .roma-panel-footer-brand {
+        justify-content: center;
+    }
+
+    .roma-panel-footer-copy {
+        order: 2;
+    }
+
+    .roma-panel-footer-home {
+        order: 3;
+    }
+}

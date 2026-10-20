@@ -1,0 +1,377 @@
+
+.roma-contact-page {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(34, 196, 193, 0.08),
+            transparent 30%
+        ),
+        #f6f8f8;
+}
+
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.roma-contact-wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.roma-contact-card {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 55px 60px 35px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e8eeee;
+    border-radius: 24px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.07);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TOP DECORATION
+========================================= */
+
+.roma-contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 4px;
+
+    background: #22c4c1;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.roma-contact-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: rgba(34, 196, 193, 0.10);
+
+    color: #22c4c1;
+
+    font-size: 27px;
+}
+
+.roma-contact-icon span {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.roma-contact-badge {
+    display: inline-block;
+
+    margin-bottom: 17px;
+    padding: 7px 17px;
+
+    background: rgba(34, 196, 193, 0.10);
+
+    border-radius: 30px;
+
+    color: #22aaa7;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.roma-contact-card h1 {
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+
+    color: #222222;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.9 !important;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.roma-contact-description {
+    max-width: 570px;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    color: #666666;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 2.25 !important;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.roma-contact-actions {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 32px;
+}
+
+
+/* =========================================
+   MAIN BUTTON
+========================================= */
+
+.roma-contact-button {
+    width: 100%;
+    max-width: 390px;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    box-sizing: border-box;
+
+    padding: 0 20px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.roma-contact-primary {
+    background: #22c4c1;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(34, 196, 193, 0.18);
+}
+
+.roma-contact-primary:hover {
+    background: #159f9c;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(34, 196, 193, 0.23);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.roma-contact-secondary {
+    background: #f7fafa;
+
+    color: #444444;
+
+    border: 1px solid #e2e9e9;
+}
+
+.roma-contact-secondary:hover {
+    background: #ffffff;
+
+    color: #22aaa7;
+
+    border-color: #22c4c1;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.roma-contact-arrow {
+    font-size: 17px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.roma-contact-button:hover .roma-contact-arrow {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.roma-contact-logout {
+    margin-top: 4px;
+
+    color: #999999;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+.roma-contact-logout:hover {
+    color: #d9534f;
+}
+
+
+/* =========================================
+   FOOTER LINK
+========================================= */
+
+.roma-contact-footer {
+    margin-top: 38px;
+    padding-top: 22px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.roma-contact-footer a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #888888;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+.roma-contact-footer a:hover {
+    color: #22c4c1;
+}
+
+.roma-contact-footer span {
+    font-size: 17px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.roma-contact-footer a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .roma-contact-wrapper {
+        padding: 30px 15px;
+    }
+
+    .roma-contact-card {
+        padding: 42px 25px 28px;
+
+        border-radius: 18px;
+    }
+
+    .roma-contact-card h1 {
+        font-size: 23px;
+    }
+
+    .roma-contact-description {
+        font-size: 13px;
+    }
+
+}
+

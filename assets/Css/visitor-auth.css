@@ -1,0 +1,234 @@
+
+.roma-auth-page {
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.roma-auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.roma-auth-card {
+    width: 100%;
+    max-width: 470px;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.roma-auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.roma-auth-badge {
+    display: inline-block;
+    padding: 7px 17px;
+    margin-bottom: 15px;
+    background: rgba(34, 196, 193, 0.10);
+    color: #22c4c1;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.roma-auth-header h1 {
+    margin: 0 0 10px;
+    color: #222222;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.roma-auth-header p {
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.roma-auth-message {
+    margin-bottom: 22px;
+    padding: 12px 15px;
+    background: #fff3f3;
+    border: 1px solid #ffd7d7;
+    border-radius: 9px;
+    color: #d9534f;
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.roma-auth-form {
+    width: 100%;
+}
+
+.roma-form-group {
+    margin-bottom: 20px;
+}
+
+.roma-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.roma-form-group input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 9px;
+    outline: none;
+    color: #333333;
+    font-family: inherit;
+    font-size: 14px;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    box-sizing: border-box;
+}
+
+.roma-form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+.roma-form-group input:focus {
+    background: #ffffff;
+    border-color: #22c4c1;
+    box-shadow: 0 0 0 3px rgba(34, 196, 193, 0.10);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.roma-auth-button {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 9px;
+    background: #22c4c1;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.roma-auth-button:hover {
+    background: #159f9c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(34, 196, 193, 0.22);
+}
+
+.roma-auth-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.roma-auth-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 25px;
+    color: #888888;
+    font-size: 13px;
+}
+
+.roma-auth-footer a {
+    color: #22c4c1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.roma-auth-footer a:hover {
+    color: #159f9c;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.roma-auth-back {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+}
+
+.roma-auth-back a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #777777;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.roma-auth-back a:hover {
+    color: #22c4c1;
+}
+
+.roma-auth-back span {
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.roma-auth-back a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .roma-auth-wrapper {
+        padding: 30px 15px;
+    }
+
+    .roma-auth-card {
+        padding: 32px 22px;
+        border-radius: 16px;
+    }
+
+    .roma-auth-header h1 {
+        font-size: 24px;
+    }
+
+}
+

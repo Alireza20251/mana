@@ -1,0 +1,191 @@
+
+.roma-delete-article-page {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 35px 15px 50px;
+    color: #304147;
+}
+
+.roma-delete-article-page * {
+    box-sizing: border-box;
+}
+
+.roma-delete-article-card {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    padding: 36px;
+    overflow: hidden;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e8edef;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(35, 54, 62, 0.06);
+}
+
+.roma-delete-article-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f4a0a0, #d95761);
+    content: "";
+}
+
+.roma-delete-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+    color: #d95761;
+    background: #fff0f0;
+    border: 1px solid #f8dada;
+    border-radius: 21px;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.roma-delete-badge {
+    display: inline-block;
+    padding: 6px 13px;
+    margin-bottom: 13px;
+    color: #148f8c;
+    background: #e4f7f5;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.roma-delete-article-card h1 {
+    margin: 0 0 12px;
+    color: #293b41;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.roma-delete-description {
+    margin: 0 auto 24px;
+    max-width: 440px;
+    color: #7e8c91;
+    font-size: 13px;
+    line-height: 2.1;
+}
+
+.roma-delete-article-info {
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    text-align: right;
+    background: #f8fafa;
+    border: 1px solid #e8eeee;
+    border-radius: 12px;
+}
+
+.roma-delete-info-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #89969b;
+    font-size: 11px;
+}
+
+.roma-delete-article-info strong {
+    display: block;
+    color: #34474d;
+    font-size: 14px;
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+.roma-delete-error {
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    color: #a83f46;
+    background: #fff2f2;
+    border: 1px solid #f6dada;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.roma-delete-form {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.roma-delete-confirm-button,
+.roma-delete-cancel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.roma-delete-confirm-button {
+    color: #ffffff;
+    background: #d95761;
+    border-color: #d95761;
+}
+
+.roma-delete-confirm-button:hover {
+    color: #ffffff;
+    background: #c7444f;
+    border-color: #c7444f;
+    transform: translateY(-1px);
+}
+
+.roma-delete-cancel-button {
+    color: #53666d !important;
+    background: #f4f7f7;
+    border-color: #e2eaea;
+}
+
+.roma-delete-cancel-button:hover {
+    color: #293b41 !important;
+    background: #eaf0f0;
+}
+
+.roma-delete-warning {
+    margin: 22px 0 0;
+    color: #99a3a7;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+@media (max-width: 600px) {
+    .roma-delete-article-page {
+        padding: 20px 10px 35px;
+    }
+
+    .roma-delete-article-card {
+        padding: 25px 20px;
+    }
+
+    .roma-delete-article-card h1 {
+        font-size: 20px;
+    }
+
+    .roma-delete-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 17px;
+        font-size: 27px;
+    }
+}

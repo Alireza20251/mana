@@ -1,0 +1,238 @@
+
+.roma-submit-page {
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.roma-submit-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.roma-submit-card {
+    width: 100%;
+    max-width: 760px;
+    padding: 45px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.07);
+}
+
+
+.roma-submit-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.roma-submit-badge {
+    display: inline-block;
+    padding: 7px 17px;
+    margin-bottom: 15px;
+    background: rgba(34, 196, 193, 0.10);
+    color: #22c4c1;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.roma-submit-header h1 {
+    margin: 0 0 10px;
+    color: #222222;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.roma-submit-header p {
+    margin: 0 0 5px;
+    color: #555555;
+    font-size: 14px;
+}
+
+.roma-submit-header small {
+    color: #999999;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.roma-submit-message {
+    padding: 13px 16px;
+    margin-bottom: 22px;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.roma-submit-error {
+    background: #fff3f3;
+    border: 1px solid #ffd7d7;
+    color: #d9534f;
+}
+
+.roma-submit-success {
+    background: #effbf9;
+    border: 1px solid #c9eee9;
+    color: #159e9b;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.roma-submit-group {
+    margin-bottom: 22px;
+}
+
+.roma-submit-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.roma-submit-group input,
+.roma-submit-group select,
+.roma-submit-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: 9px;
+    background: #fafafa;
+    color: #333333;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.roma-submit-group input,
+.roma-submit-group select {
+    height: 50px;
+    padding: 0 15px;
+}
+
+.roma-submit-group textarea {
+    min-height: 250px;
+    padding: 14px 15px;
+    resize: vertical;
+    line-height: 2;
+}
+
+.roma-submit-group input::placeholder,
+.roma-submit-group textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.roma-submit-group input:focus,
+.roma-submit-group select:focus,
+.roma-submit-group textarea:focus {
+    background: #ffffff;
+    border-color: #22c4c1;
+    box-shadow: 0 0 0 3px rgba(34, 196, 193, 0.10);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.roma-submit-button {
+    width: 100%;
+    height: 51px;
+    border: none;
+    border-radius: 9px;
+    background: #22c4c1;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.roma-submit-button:hover {
+    background: #159f9c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(34, 196, 193, 0.22);
+}
+
+.roma-submit-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   BACK
+========================================= */
+
+.roma-submit-back {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+}
+
+.roma-submit-back a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #777777;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.roma-submit-back a:hover {
+    color: #22c4c1;
+}
+
+.roma-submit-back span {
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.roma-submit-back a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .roma-submit-wrapper {
+        padding: 30px 15px;
+    }
+
+    .roma-submit-card {
+        padding: 32px 22px;
+        border-radius: 16px;
+    }
+
+    .roma-submit-header h1 {
+        font-size: 25px;
+    }
+
+    .roma-submit-group textarea {
+        min-height: 210px;
+    }
+
+}
+

@@ -1,0 +1,498 @@
+
+.roma-admin-articles-page {
+    direction: rtl;
+    color: #2d3c42;
+    padding-bottom: 35px;
+}
+
+.roma-admin-articles-page * {
+    box-sizing: border-box;
+}
+
+/* سربرگ صفحه */
+
+.roma-admin-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 27px;
+    padding: 28px 30px;
+    background: linear-gradient(115deg, #e9f9f8, #ffffff);
+    border: 1px solid #dcefed;
+    border-radius: 18px;
+}
+
+.roma-admin-page-heading {
+    min-width: 0;
+}
+
+.roma-admin-page-badge {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 13px;
+    color: #148f8c;
+    background: #d9f4f2;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.roma-admin-page-heading h1 {
+    margin: 0 0 9px;
+    color: #26383e;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.roma-admin-page-heading p {
+    margin: 0;
+    color: #78878c;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* دکمه افزودن */
+
+.roma-admin-add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-shrink: 0;
+    padding: 12px 18px;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #26c5c0, #159d99);
+    border: 1px solid #22b8b3;
+    border-radius: 11px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.7;
+    text-decoration: none !important;
+    box-shadow: 0 5px 13px rgba(34, 196, 193, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.roma-admin-add-button:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 19px rgba(34, 196, 193, 0.24);
+}
+
+.roma-admin-add-button span {
+    font-size: 21px;
+    line-height: 1;
+}
+
+/* کارت اصلی */
+
+.roma-admin-articles-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e8edef;
+    border-radius: 17px;
+    box-shadow: 0 6px 24px rgba(35, 54, 62, 0.045);
+}
+
+/* نوار بالای جدول */
+
+.roma-admin-articles-toolbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 25px 25px 23px;
+    border-bottom: 1px solid #edf1f2;
+}
+
+.roma-admin-articles-toolbar-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.roma-admin-articles-toolbar-title h2 {
+    margin: 0;
+    color: #2e4147;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.roma-admin-articles-count {
+    display: inline-block;
+    padding: 5px 11px;
+    color: #168f8b;
+    background: #e7f7f6;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* جستجو */
+
+.roma-admin-article-search {
+    width: 100%;
+    max-width: 390px;
+    margin: 0;
+}
+
+.roma-admin-article-search > label {
+    display: block;
+    margin-bottom: 8px;
+    color: #637379;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.roma-admin-search-control {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.roma-admin-search-control input {
+    flex: 1;
+    min-width: 0;
+    height: 43px;
+    padding: 0 13px;
+    color: #34454b;
+    background: #fbfcfc;
+    border: 1px solid #dfe7e9;
+    border-radius: 9px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.roma-admin-search-control input:focus {
+    background: #ffffff;
+    border-color: #22c4c1;
+    box-shadow: 0 0 0 3px rgba(34, 196, 193, 0.10);
+}
+
+.roma-admin-search-control button {
+    flex-shrink: 0;
+    min-width: 76px;
+    padding: 0 14px;
+    color: #ffffff;
+    background: #22bdb8;
+    border: 1px solid #22bdb8;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.roma-admin-search-control button:hover {
+    background: #159d99;
+    border-color: #159d99;
+}
+
+.roma-admin-search-reset {
+    display: inline-block;
+    margin-top: 9px;
+    color: #159d99 !important;
+    font-size: 11px;
+    text-decoration: none !important;
+}
+
+.roma-admin-search-reset:hover {
+    color: #107b78 !important;
+    text-decoration: underline !important;
+}
+
+/* جدول */
+
+.roma-admin-table-wrapper {
+    width: 100%;
+    overflow: auto;
+    outline: none;
+}
+
+.roma-admin-table-wrapper:focus-visible {
+    box-shadow: inset 0 0 0 2px #22c4c1;
+}
+
+.roma-admin-articles-table {
+    width: 100%;
+    min-width: 1090px;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    color: #405158;
+    font-size: 12px;
+}
+
+.roma-admin-articles-table thead th {
+    padding: 17px 13px;
+    color: #64747a;
+    background: #f7fafa;
+    border-top: 0;
+    border-bottom: 1px solid #e8eeee;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.roma-admin-articles-table tbody td {
+    padding: 14px 13px;
+    color: #586970;
+    border-top: 0;
+    border-bottom: 1px solid #edf1f2;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.9;
+}
+
+.roma-admin-articles-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.roma-admin-articles-table tbody tr {
+    transition: background 0.18s ease;
+}
+
+.roma-admin-articles-table tbody tr:hover {
+    background: #f9fdfd;
+}
+
+.roma-admin-articles-table .roma-admin-title-column {
+    min-width: 210px;
+}
+
+.roma-admin-row-number {
+    color: #89979c !important;
+    font-weight: 700;
+}
+
+/* تصویر مقاله */
+
+.roma-admin-article-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #f0f5f5;
+    border: 1px solid #e5ecec;
+    border-radius: 12px;
+}
+
+.roma-admin-article-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.roma-admin-no-image {
+    color: #a4b1b4;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* عنوان مقاله */
+
+.roma-admin-article-title {
+    min-width: 210px;
+    max-width: 300px;
+    color: #2f4349 !important;
+    font-weight: 700;
+    text-align: right !important;
+    overflow-wrap: anywhere;
+}
+
+/* نویسنده و دسته‌بندی */
+
+.roma-admin-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.roma-admin-author-badge {
+    display: inline-block;
+    padding: 3px 9px;
+    color: #986b13;
+    background: #fff4d7;
+    border: 1px solid #f5e6b8;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.roma-admin-category {
+    display: inline-block;
+    padding: 5px 9px;
+    color: #4379a0;
+    background: #edf6fc;
+    border-radius: 7px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* دکمه‌های عملیات */
+
+.roma-admin-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 7px 11px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.7;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.roma-admin-edit {
+    color: #218dba !important;
+    background: #edf8fc;
+    border-color: #d7eff8;
+}
+
+.roma-admin-edit:hover {
+    color: #ffffff !important;
+    background: #299cc8;
+    border-color: #299cc8;
+}
+
+.roma-admin-delete {
+    color: #d45d66 !important;
+    background: #fff2f2;
+    border-color: #f8dddd;
+}
+
+.roma-admin-delete:hover {
+    color: #ffffff !important;
+    background: #d95761;
+    border-color: #d95761;
+}
+
+/* تاریخ */
+
+.roma-admin-date {
+    min-width: 125px;
+    color: #829096 !important;
+    direction: ltr;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+/* نتیجه خالی */
+
+.roma-admin-empty-cell {
+    padding: 0 !important;
+}
+
+.roma-admin-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.roma-admin-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 16px;
+    color: #159d99;
+    background: #e6f8f6;
+    border-radius: 18px;
+    font-size: 27px;
+}
+
+.roma-admin-empty h3 {
+    margin: 0 0 9px;
+    color: #34464c;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.roma-admin-empty p {
+    margin: 0 0 19px;
+    color: #87959a;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* پایین جدول */
+
+.roma-admin-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    padding: 17px 24px;
+    color: #839196;
+    background: #fcfdfd;
+    border-top: 1px solid #edf1f2;
+    font-size: 11px;
+}
+
+.roma-admin-table-footer strong {
+    color: #159d99;
+    font-size: 12px;
+}
+
+/* نمایش در عرض کمتر */
+
+@media (max-width: 900px) {
+    .roma-admin-page-header {
+        align-items: flex-start;
+    }
+
+    .roma-admin-articles-toolbar {
+        flex-direction: column;
+    }
+
+    .roma-admin-article-search {
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .roma-admin-page-header {
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .roma-admin-page-heading h1 {
+        font-size: 22px;
+    }
+
+    .roma-admin-add-button {
+        width: 100%;
+    }
+
+    .roma-admin-articles-toolbar {
+        padding: 20px 16px;
+    }
+
+    .roma-admin-table-footer {
+        padding: 15px 16px;
+    }
+}
